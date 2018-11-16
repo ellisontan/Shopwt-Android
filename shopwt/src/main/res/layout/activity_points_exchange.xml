@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <top.yokey.shopwt.view.PullRefreshView
+        android:id="@+id/mainPullRefreshView"
+        style="@style/Layout.Main" />
+
+</android.support.v7.widget.LinearLayoutCompat>

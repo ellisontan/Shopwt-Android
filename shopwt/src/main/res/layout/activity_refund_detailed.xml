@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/mainScrollView"
+        style="@style/Layout.Main">
+
+        <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:text="我的退款申请"
+                tools:ignore="HardcodedText" />
+
+            <RelativeLayout style="@style/Layout.Tool">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.ToolTitle"
+                    android:text="退款编号"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/snTextView"
+                    style="@style/TextView.ToolValue"
+                    android:text="" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.ToolTitle"
+                    android:text="退款原因"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/reasonTextView"
+                    style="@style/TextView.ToolValue"
+                    android:text="取消订单，全部退款"
+                    tools:ignore="HardcodedText" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.ToolTitle"
+                    android:text="退款金额"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/moneyTextView"
+                    style="@style/TextView.ToolValue" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.ToolTitle"
+                    android:text="退款说明"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/remarkTextView"
+                    style="@style/TextView.ToolValue" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/Layout.Tool"
+                android:layout_height="64dip"
+                android:layout_marginTop="1px">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/refundTextView"
+                    style="@style/TextView.ToolTitle"
+                    android:text="退款凭证"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/zeroImageView"
+                    android:layout_width="48dip"
+                    android:layout_height="48dip"
+                    android:layout_marginLeft="4dip"
+                    android:layout_marginStart="4dip"
+                    android:layout_marginTop="8dip"
+                    android:layout_toLeftOf="@+id/oneImageView"
+                    android:layout_toStartOf="@+id/oneImageView"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_add_img" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/oneImageView"
+                    android:layout_width="48dip"
+                    android:layout_height="48dip"
+                    android:layout_marginLeft="4dip"
+                    android:layout_marginStart="4dip"
+                    android:layout_marginTop="8dip"
+                    android:layout_toLeftOf="@+id/twoImageView"
+                    android:layout_toStartOf="@+id/twoImageView"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_add_img" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/twoImageView"
+                    android:layout_width="48dip"
+                    android:layout_height="48dip"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginStart="8dip"
+                    android:layout_marginTop="8dip"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_add_img" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:text="商家退款处理"
+                tools:ignore="HardcodedText" />
+
+            <RelativeLayout
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.ToolTitle"
+                    android:text="审核状态"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/storeStateTextView"
+                    style="@style/TextView.ToolValue" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.ToolTitle"
+                    android:text="商家备注"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/storeRemarkTextView"
+                    style="@style/TextView.ToolValue" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:text="商城退款审核"
+                tools:ignore="HardcodedText" />
+
+            <RelativeLayout
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.ToolTitle"
+                    android:text="平台确认"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/adminStateTextView"
+                    style="@style/TextView.ToolValue" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.ToolTitle"
+                    android:text="平台备注"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/adminRemarkTextView"
+                    style="@style/TextView.ToolValue" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:text="退款详细"
+                tools:ignore="HardcodedText" />
+
+            <RelativeLayout
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.ToolTitle"
+                    android:text="支付方式"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/paymentTextView"
+                    style="@style/TextView.ToolValue" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.ToolTitle"
+                    android:text="在线退款金额"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/onlineMoneyTextView"
+                    style="@style/TextView.ToolValue" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.ToolTitle"
+                    android:text="预存款返还金额"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/preDepositMoneyTextView"
+                    style="@style/TextView.ToolValue" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.ToolTitle"
+                    android:text="充值卡返还金额"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/rechargeCardMoneyTextView"
+                    style="@style/TextView.ToolValue" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.v7.widget.LinearLayoutCompat>

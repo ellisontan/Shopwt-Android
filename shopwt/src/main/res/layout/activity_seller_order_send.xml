@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/mainScrollView"
+        style="@style/Layout.Main">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/contentLinearLayout"
+            style="@style/Layout.Main">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Tool"
+                android:layout_marginTop="16dip"
+                android:background="@color/white"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:text="第一步：确认收货信息及交易详细"
+                android:textColor="@color/primary"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Wrap"
+                android:layout_marginTop="1px"
+                android:background="@drawable/selector_color_white">
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    style="@style/Layout.Horizontal"
+                    android:layout_height="40dip"
+                    android:paddingLeft="16dip"
+                    android:paddingRight="16dip">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/snTextView"
+                        style="@style/TextView.ToolTitle"
+                        android:layout_height="40dip"
+                        android:layout_weight="1"
+                        android:drawablePadding="4dip"
+                        android:text="单号：1234567890123"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/timeTextView"
+                        style="@style/TextView.ToolValueDot"
+                        android:layout_height="40dip"
+                        android:text="2018年2月25日 20:20"
+                        android:textColor="@color/primary"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <View style="@style/View.Line" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mainRecyclerView"
+                    style="@style/Layout.Main"
+                    android:paddingBottom="4dip"
+                    android:paddingLeft="16dip"
+                    android:paddingRight="16dip"
+                    android:paddingTop="4dip" />
+
+                <View
+                    android:id="@+id/zengPinView"
+                    style="@style/View.Line" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:id="@+id/zengPinLinearLayout"
+                    style="@style/Layout.Horizontal"
+                    android:layout_height="40dip"
+                    android:paddingBottom="8dip"
+                    android:paddingLeft="16dip"
+                    android:paddingRight="16dip"
+                    android:paddingTop="8dip">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/TextView.GoodsActivity"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/specChooseTextView"
+                        android:layout_alignTop="@+id/specChooseTextView"
+                        android:layout_toEndOf="@+id/specChooseTextView"
+                        android:layout_toRightOf="@+id/specChooseTextView"
+                        android:text="赠品"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/zengPinDescTextView"
+                        style="@style/TextView.Small"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="4dip"
+                        android:paddingRight="4dip"
+                        android:singleLine="true" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/zengPinGoodsImageView"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/ic_launcher" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <View style="@style/View.Line" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/totalTextView"
+                    style="@style/TextView.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:ellipsize="end"
+                    android:gravity="end|center"
+                    android:maxLines="1"
+                    android:paddingLeft="16dip"
+                    android:paddingRight="16dip" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <RelativeLayout
+                android:id="@+id/addressRelativeLayout"
+                style="@style/Layout.Tool"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1px">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/addressNameTextView"
+                    style="@style/TextView.Max"
+                    android:layout_marginTop="12dip"
+                    android:textColor="@color/blackSub" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/addressMobileTextView"
+                    style="@style/TextView.Normal"
+                    android:layout_alignBottom="@+id/addressNameTextView"
+                    android:layout_alignTop="@+id/addressNameTextView"
+                    android:layout_toEndOf="@+id/addressNameTextView"
+                    android:layout_toRightOf="@+id/addressNameTextView"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/addressAreaTextView"
+                    style="@style/TextView.Normal"
+                    android:layout_below="@+id/addressNameTextView"
+                    android:layout_marginBottom="12dip"
+                    android:layout_marginTop="4dip" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Tool"
+                android:layout_marginTop="16dip"
+                android:background="@color/white"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:text="第二步：确认发货信息"
+                android:textColor="@color/primary"
+                tools:ignore="HardcodedText" />
+
+            <RelativeLayout
+                android:id="@+id/daddressRelativeLayout"
+                style="@style/Layout.Tool"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1px">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/daddressNameTextView"
+                    style="@style/TextView.Max"
+                    android:layout_marginTop="12dip"
+                    android:textColor="@color/blackSub" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/daddressMobileTextView"
+                    style="@style/TextView.Normal"
+                    android:layout_alignBottom="@+id/daddressNameTextView"
+                    android:layout_alignTop="@+id/daddressNameTextView"
+                    android:layout_toEndOf="@+id/daddressNameTextView"
+                    android:layout_toRightOf="@+id/daddressNameTextView"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/daddressAreaTextView"
+                    style="@style/TextView.Normal"
+                    android:layout_below="@+id/daddressNameTextView"
+                    android:layout_marginBottom="12dip"
+                    android:layout_marginTop="4dip" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Tool"
+                android:layout_marginTop="16dip"
+                android:background="@color/white"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:text="第三步：选择物流服务"
+                android:textColor="@color/primary"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/needRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:checked="true"
+                    android:text="物流运输"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/noNeedRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dip"
+                    android:layout_marginStart="16dip"
+                    android:text="无需物流运输"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/expressRecyclerView"
+                style="@style/Layout.Wrap"
+                android:layout_marginTop="1px" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/noNeedTextView"
+                style="@style/TextView.Area"
+                android:layout_marginTop="1px"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="16dip"
+                android:text="如果订单商品无需物流运输，请直接点击确认"
+                android:visibility="gone"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/confirmTextView"
+                android:visibility="gone"
+                style="@style/TextView.Button"
+                android:text="确认"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.v7.widget.LinearLayoutCompat>

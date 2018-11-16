@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Wrap">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mainViewPager"
+        style="@style/Layout.Main"
+        android:layout_weight="1" />
+
+    <View
+        style="@style/View.Line"
+        android:background="@color/whiteAdd" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/navigationLinearLayout"
+        style="@style/Layout.Horizontal"
+        android:layout_height="48dip">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/homeTextView"
+            style="@style/TextView.Navigation"
+            android:drawableTop="@drawable/ic_navigation_home"
+            android:text="@string/home" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/cateTextView"
+            style="@style/TextView.Navigation"
+            android:drawableTop="@drawable/ic_navigation_cate"
+            android:text="@string/classification" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/searchTextView"
+            style="@style/TextView.Navigation"
+            android:drawableTop="@drawable/ic_navigation_search"
+            android:text="@string/search" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/cartTextView"
+            style="@style/TextView.Navigation"
+            android:drawableTop="@drawable/ic_navigation_cart"
+            android:text="@string/cart" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/mineTextView"
+            style="@style/TextView.Navigation"
+            android:drawableTop="@drawable/ic_navigation_mine"
+            android:text="@string/mine" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

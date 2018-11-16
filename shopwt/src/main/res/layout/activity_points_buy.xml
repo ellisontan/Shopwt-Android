@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/lineView"
+        style="@style/View.Line"
+        android:layout_below="@+id/mainToolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/mainScrollView"
+        style="@style/Layout.Main"
+        android:layout_above="@+id/lineOneView"
+        android:layout_below="@+id/lineView">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/contentLinearLayout"
+            style="@style/Layout.Wrap">
+
+            <RelativeLayout
+                android:id="@+id/addressRelativeLayout"
+                style="@style/Layout.Tool"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/addressTitleTextView"
+                    style="@style/TextView.ToolTitle"
+                    android:layout_height="40dip"
+                    android:text="收货地址"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.ToolValueDot"
+                    android:layout_height="40dip"
+                    android:text="点击选择"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    style="@style/View.Line"
+                    android:layout_below="@+id/addressTitleTextView" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/addressNameTextView"
+                    style="@style/TextView.Max"
+                    android:layout_below="@+id/addressTitleTextView"
+                    android:layout_marginTop="12dip"
+                    android:textColor="@color/blackSub" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/addressMobileTextView"
+                    style="@style/TextView.Normal"
+                    android:layout_alignBottom="@+id/addressNameTextView"
+                    android:layout_alignTop="@+id/addressNameTextView"
+                    android:layout_toEndOf="@+id/addressNameTextView"
+                    android:layout_toRightOf="@+id/addressNameTextView"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/addressAreaTextView"
+                    style="@style/TextView.Normal"
+                    android:layout_below="@+id/addressNameTextView"
+                    android:layout_marginBottom="12dip"
+                    android:layout_marginTop="4dip" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginTop="16dip"
+                android:background="@color/white"
+                android:drawableLeft="@mipmap/ic_store_goods"
+                android:drawablePadding="8dip"
+                android:drawableStart="@mipmap/ic_store_goods"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:text="平台兑换"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/View.Line" />
+
+            <RelativeLayout style="@style/Layout.Item">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/mainImageView"
+                    style="@style/ImageView.GoodsVer"
+                    android:layout_width="56dip"
+                    android:layout_height="56dip"
+                    android:layout_marginEnd="8dip"
+                    android:layout_marginRight="8dip" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/nameTextView"
+                    style="@style/TextView.Name"
+                    android:layout_toEndOf="@+id/mainImageView"
+                    android:layout_toRightOf="@+id/mainImageView"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/pointsTextView"
+                    style="@style/TextView.Money"
+                    android:layout_alignBottom="@+id/mainImageView"
+                    android:layout_marginEnd="4dip"
+                    android:layout_marginRight="4dip"
+                    android:layout_toEndOf="@+id/mainImageView"
+                    android:layout_toRightOf="@+id/mainImageView"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/numberTextView"
+                    style="@style/TextView.Small"
+                    android:layout_alignBottom="@+id/mainImageView"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/messageEditText"
+                    style="@style/EditText.Area"
+                    android:layout_height="48dip"
+                    android:layout_below="@+id/mainImageView"
+                    android:layout_marginTop="8dip"
+                    android:background="@drawable/border_background"
+                    android:hint="请输入订单留言"
+                    android:padding="8dip"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <View
+        android:id="@+id/lineOneView"
+        style="@style/View.Line"
+        android:layout_above="@+id/operaLinearLayout" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/operaLinearLayout"
+        style="@style/Layout.Horizontal"
+        android:layout_height="48dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/moneyTextView"
+            style="@style/TextView.Normal"
+            android:layout_weight="1"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:text="合计金额"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/balanceTextView"
+            style="@style/TextView.Normal"
+            android:layout_width="128dip"
+            android:layout_height="48dip"
+            android:background="@drawable/selector_color_primary"
+            android:gravity="center"
+            android:text="提交订单"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</RelativeLayout>

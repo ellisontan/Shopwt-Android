@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Item">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/titleTextView"
+        style="@style/TextView.Normal"
+        android:layout_height="32dip" />
+
+</android.support.v7.widget.LinearLayoutCompat>

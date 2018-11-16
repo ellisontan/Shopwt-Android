@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/mainScrollView"
+        style="@style/Layout.Main">
+
+        <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mainRecyclerView"
+                style="@style/Layout.Main"
+                android:layout_marginTop="16dip" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/saveTextView"
+                style="@style/TextView.Button"
+                android:text="追加评价"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainScrollView"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/mainLinearLayout"
+        style="@style/Layout.Main">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/mineLinearLayout"
+            style="@style/Layout.Wrap"
+            android:background="@mipmap/bg_mine"
+            android:paddingTop="24dip">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/avatarImageView"
+                style="@style/ImageView.Avatar"
+                android:layout_marginTop="16dip"
+                android:src="@mipmap/ic_default_avatar_circle" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/nicknameTextView"
+                style="@style/TextView.Title"
+                android:layout_gravity="center"
+                android:text="点击登录"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Horizontal"
+                android:background="@color/backgroundMine">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/saleDayTextView"
+                    style="@style/TextView.NavigationMine"
+                    android:lineSpacingExtra="8dip"
+                    android:maxLines="2"
+                    android:text="昨日销量"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/saleMonthTextView"
+                    style="@style/TextView.NavigationMine"
+                    android:lineSpacingExtra="8dip"
+                    android:maxLines="2"
+                    android:text="当月销量"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/saleIngTextView"
+                    style="@style/TextView.NavigationMine"
+                    android:lineSpacingExtra="8dip"
+                    android:maxLines="2"
+                    android:text="出售中"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:id="@+id/orderRelativeLayout"
+            style="@style/Layout.Tool"
+            android:layout_marginTop="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:drawableLeft="@mipmap/ic_mine_order"
+                android:drawableStart="@mipmap/ic_mine_order"
+                android:text="订单管理"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolValueDot"
+                android:text="查看全部订单"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+        <View style="@style/View.Line" />
+
+        <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Horizontal">
+
+            <RelativeLayout
+                android:id="@+id/orderNewRelativeLayout"
+                style="@style/Layout.Wrap"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/orderNewTextView"
+                    style="@style/TextView.NavigationOrder"
+                    android:drawableTop="@mipmap/ic_mine_order_wait_pay"
+                    android:text="待付款"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/orderNewDotTextView"
+                    style="@style/TextView.PrimaryDot"
+                    android:layout_marginTop="8dip"
+                    android:layout_toEndOf="@+id/orderNewTextView"
+                    android:layout_toRightOf="@+id/orderNewTextView"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/orderPayRelativeLayout"
+                style="@style/Layout.Wrap"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/orderPayTextView"
+                    style="@style/TextView.NavigationOrder"
+                    android:drawableTop="@mipmap/ic_mine_order_wait_drive"
+                    android:text="待收货"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/orderPayDotTextView"
+                    style="@style/TextView.PrimaryDot"
+                    android:layout_marginTop="8dip"
+                    android:layout_toEndOf="@+id/orderPayTextView"
+                    android:layout_toRightOf="@+id/orderPayTextView"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/orderSendRelativeLayout"
+                style="@style/Layout.Wrap"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/orderSendTextView"
+                    style="@style/TextView.NavigationOrder"
+                    android:drawableTop="@mipmap/ic_mine_order_wait_receipt"
+                    android:text="已发货"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/orderSendDotTextView"
+                    style="@style/TextView.PrimaryDot"
+                    android:layout_marginTop="8dip"
+                    android:layout_toEndOf="@+id/orderSendTextView"
+                    android:layout_toRightOf="@+id/orderSendTextView"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/orderSuccessRelativeLayout"
+                style="@style/Layout.Wrap"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/orderSuccessTextView"
+                    style="@style/TextView.NavigationOrder"
+                    android:drawableTop="@mipmap/ic_mine_order_wait_refund"
+                    android:text="已完成"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/orderSuccessDotTextView"
+                    style="@style/TextView.PrimaryDot"
+                    android:layout_marginTop="8dip"
+                    android:layout_toEndOf="@+id/orderSuccessTextView"
+                    android:layout_toRightOf="@+id/orderSuccessTextView"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:id="@+id/orderVirtualRelativeLayout"
+            style="@style/Layout.Tool"
+            android:layout_marginTop="16dip"
+            android:visibility="gone">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:drawableLeft="@mipmap/ic_mine_order"
+                android:drawableStart="@mipmap/ic_mine_order"
+                android:text="虚拟订单管理"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolValueDot"
+                android:text="查看全部虚拟订单"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/View.Line"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Horizontal"
+            android:visibility="gone">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/orderVirtualNewTextView"
+                style="@style/TextView.NavigationOrder"
+                android:background="@drawable/selector_color_white"
+                android:drawableTop="@mipmap/ic_mine_order_wait_pay"
+                android:text="待付款"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/orderVirtualPayTextView"
+                style="@style/TextView.NavigationOrder"
+                android:background="@drawable/selector_color_white"
+                android:drawableTop="@mipmap/ic_mine_order_wait_drive"
+                android:text="已付款"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/orderVirtualSuccessTextView"
+                style="@style/TextView.NavigationOrder"
+                android:background="@drawable/selector_color_white"
+                android:drawableTop="@mipmap/ic_mine_order_wait_refund"
+                android:text="已完成"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:id="@+id/goodsRelativeLayout"
+            style="@style/Layout.Tool"
+            android:layout_marginTop="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:drawableLeft="@mipmap/ic_mine_property"
+                android:drawableStart="@mipmap/ic_mine_property"
+                android:text="商品管理"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolValueDot"
+                android:text="管理您的商品"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+        <View style="@style/View.Line" />
+
+        <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/goodsIngTextView"
+                style="@style/TextView.NavigationOrder"
+                android:background="@drawable/selector_color_white"
+                android:drawableTop="@mipmap/ic_mine_property_pre_deposit"
+                android:text="出售中"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/goodsWareTextView"
+                style="@style/TextView.NavigationOrder"
+                android:background="@drawable/selector_color_white"
+                android:drawableTop="@mipmap/ic_mine_property_points"
+                android:text="仓库中"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/goodsIllegalTextView"
+                style="@style/TextView.NavigationOrder"
+                android:background="@drawable/selector_color_white"
+                android:drawableTop="@mipmap/ic_mine_property_recharge_card"
+                android:text="违规商品"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/goodsAddTextView"
+                style="@style/TextView.NavigationOrder"
+                android:background="@drawable/selector_color_white"
+                android:drawableTop="@mipmap/ic_mine_order_wait_evaluate"
+                android:text="发布商品"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:id="@+id/addressRelativeLayout"
+            style="@style/Layout.Tool"
+            android:layout_marginTop="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:drawableLeft="@mipmap/ic_mine_address"
+                android:drawableStart="@mipmap/ic_mine_address"
+                android:text="发货地址管理"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolValueDot"
+                android:text="管理您的发货地址管理"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/logisticsRelativeLayout"
+            style="@style/Layout.Tool"
+            android:layout_marginTop="1px">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:drawableLeft="@mipmap/ic_mine_order_wait_receipt"
+                android:drawableStart="@mipmap/ic_mine_order_wait_receipt"
+                android:text="物流公司管理"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolValueDot"
+                android:text="管理物流公司"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/settingRelativeLayout"
+            style="@style/Layout.Tool"
+            android:layout_marginTop="1px">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:drawableLeft="@mipmap/ic_mine_setting"
+                android:drawableStart="@mipmap/ic_mine_setting"
+                android:text="店铺设置"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolValueDot"
+                android:text="设置您的店铺"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/logoutTextView"
+            style="@style/TextView.Button"
+            android:text="注销登录"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v4.widget.NestedScrollView>

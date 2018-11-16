@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        style="@style/Layout.Main"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:layout_marginTop="16dip"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="@string/mobile"
+                android:textSize="14sp" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/mobileEditText"
+                style="@style/EditText.Mobile"
+                android:layout_weight="1" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/getTextView"
+                style="@style/TextView.Title"
+                android:text="@string/get_verify_code"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:layout_marginTop="1px"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="@string/sms_verify"
+                android:textSize="14sp" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/codeEditText"
+                style="@style/EditText.Username"
+                android:hint="请输入短信验证码"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:layout_marginTop="1px"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="设置密码"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/passwordEditText"
+                style="@style/EditText.Password"
+                android:hint="请输入新密码"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/findPassTextView"
+            style="@style/TextView.Button"
+            android:text="找回密码"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

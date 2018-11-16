@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--suppress ALL -->
+
+<resources>
+
+    <!-- Base -->
+
+    <style name="Theme.Main" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/primary</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="android:textColorPrimary">@color/title</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:windowAnimationStyle">@style/Anim.Main</item>
+        <item name="android:colorBackgroundCacheHint">@color/background</item>
+    </style>
+
+    <style name="Anim.Main" parent="@android:style/Animation">
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+
+    <style name="Theme.Load" parent="Theme.Main">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@color/transparent</item>
+    </style>
+
+    <!-- View -->
+
+    <style name="View" />
+
+    <style name="View.Line">
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/background</item>
+    </style>
+
+    <style name="View.Horizontal">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/background</item>
+    </style>
+
+    <!-- Layout -->
+
+    <style name="Layout" />
+
+    <style name="Layout.Tab">
+        <item name="android:layout_height">40dip</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/selector_color_white</item>
+    </style>
+
+    <style name="Layout.Main">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="Layout.Tool">
+        <item name="android:paddingLeft">16dip</item>
+        <item name="android:paddingRight">16dip</item>
+        <item name="android:layout_height">48dip</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/selector_color_white</item>
+    </style>
+
+    <style name="Layout.Wrap">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Layout.Item">
+        <item name="android:paddingTop">8dip</item>
+        <item name="android:paddingLeft">16dip</item>
+        <item name="android:paddingRight">16dip</item>
+        <item name="android:paddingBottom">8dip</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_color_white</item>
+    </style>
+
+    <style name="Layout.Goods">
+        <item name="android:padding">4dip</item>
+        <item name="android:layout_margin">2dip</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_border_white</item>
+    </style>
+
+    <style name="Layout.Horizontal">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- Toolbar -->
+
+    <style name="Toolbar" />
+
+    <style name="Toolbar.Main">
+        <item name="android:layout_height">48dip</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/whiteSub</item>
+        <item name="contentInsetStartWithNavigation">0dip</item>
+    </style>
+
+    <!-- TextView -->
+
+    <style name="TextView" />
+
+    <style name="TextView.Max">
+        <item name="android:textSize">16sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:drawablePadding">8dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/greyAdd</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextView.Spec">
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">6dip</item>
+        <item name="android:paddingLeft">8dip</item>
+        <item name="android:paddingRight">8dip</item>
+        <item name="android:paddingBottom">6dip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/border_primary_add</item>
+    </style>
+
+    <style name="TextView.Line">
+        <item name="android:textSize">14sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:drawablePadding">4dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/greyAdd</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:drawableLeft">@mipmap/ic_default_line</item>
+        <item name="android:drawableStart">@mipmap/ic_default_line</item>
+    </style>
+
+    <style name="TextView.Tool">
+        <item name="android:textSize">14sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:drawablePadding">4dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/greyAdd</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/background</item>
+    </style>
+
+    <style name="TextView.Chat">
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingTop">12dip</item>
+        <item name="android:paddingLeft">20dip</item>
+        <item name="android:paddingRight">16dip</item>
+        <item name="android:paddingBottom">14dip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextView.Area">
+        <item name="android:textSize">14sp</item>
+        <item name="android:drawablePadding">8dip</item>
+        <item name="android:textColor">@color/greyAdd</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextView.Name">
+        <item name="android:maxLines">2</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:drawablePadding">8dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/blackSub</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextView.Time">
+        <item name="android:textSize">10sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:drawablePadding">8dip</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="TextView.Small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:drawablePadding">8dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/greyAdd</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextView.Money">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_height">24dip</item>
+        <item name="android:drawablePadding">8dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="TextView.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_height">48dip</item>
+        <item name="android:drawablePadding">8dip</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/title</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="TextView.Smalls">
+        <item name="android:textSize">10sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:drawablePadding">8dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/greyAdd</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextView.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">16dip</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:drawablePadding">8dip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/selector_border_primary</item>
+    </style>
+
+    <style name="TextView.Normal">
+        <item name="android:textSize">14sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:drawablePadding">8dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/greyAdd</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextView.Delete">
+        <item name="android:text">删除</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">88dip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/primary</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="TextView.PrimaryDot">
+        <item name="android:layout_width">8dip</item>
+        <item name="android:layout_height">8dip</item>
+        <item name="android:background">@drawable/border_primary_dot</item>
+    </style>
+
+    <style name="TextView.Selector">
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">text</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">24dip</item>
+        <item name="android:layout_height">24dip</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:background">@drawable/selector_border_selector</item>
+    </style>
+
+    <style name="TextView.ToolNav">
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">4dip</item>
+        <item name="android:paddingLeft">12dip</item>
+        <item name="android:paddingRight">12dip</item>
+        <item name="android:paddingBottom">4dip</item>
+        <item name="android:layout_height">32dip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="TextView.ToolTitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">48dip</item>
+        <item name="android:drawablePadding">8dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/title</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="TextView.ToolValue">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">48dip</item>
+        <item name="android:drawablePadding">8dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="TextView.Navigation">
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">6dip</item>
+        <item name="android:paddingBottom">4dip</item>
+        <item name="android:layout_height">48dip</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/selector_color_white</item>
+    </style>
+
+    <style name="TextView.ChooseType">
+        <item name="android:textSize">12sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingTop">6dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+        <item name="android:paddingBottom">6dip</item>
+        <item name="android:drawablePadding">8dip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginRight">8dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_border_primary</item>
+    </style>
+
+    <style name="TextView.ToolValueDot">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">48dip</item>
+        <item name="android:drawablePadding">8dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:drawableEnd">@mipmap/ic_dot_right</item>
+        <item name="android:drawableRight">@mipmap/ic_dot_right</item>
+    </style>
+
+    <style name="TextView.GoodsActivity">
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">2dip</item>
+        <item name="android:paddingLeft">8dip</item>
+        <item name="android:paddingRight">8dip</item>
+        <item name="android:paddingBottom">2dip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/border_primary</item>
+    </style>
+
+    <style name="TextView.ItemFavorites">
+        <item name="android:text">收藏</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:paddingTop">88dip</item>
+        <item name="android:paddingBottom">88dip</item>
+        <item name="android:drawablePadding">8dip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/backgroundStore</item>
+        <item name="android:drawableTop">@drawable/ic_favorite_white</item>
+    </style>
+
+    <style name="TextView.ItemMobileHave">
+        <item name="android:text">手机专享</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">4dip</item>
+        <item name="android:paddingRight">4dip</item>
+        <item name="android:layout_margin">2dip</item>
+        <item name="android:drawablePadding">4dip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/primary</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawableLeft">@mipmap/ic_item_mobile</item>
+    </style>
+
+    <style name="TextView.NavigationMine">
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">12dip</item>
+        <item name="android:layout_height">64dip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="TextView.NavigationStore">
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">10dip</item>
+        <item name="android:paddingBottom">6dip</item>
+        <item name="android:layout_height">56dip</item>
+        <item name="android:drawablePadding">4dip</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/selector_color_white</item>
+    </style>
+
+    <style name="TextView.NavigationOrder">
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">12dip</item>
+        <item name="android:paddingBottom">8dip</item>
+        <item name="android:drawablePadding">6dip</item>
+        <item name="android:textColor">@color/greyAdd</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <!-- EditText -->
+
+    <style name="EditText" />
+
+    <style name="EditText.Line">
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:hint">请输入内容</item>
+        <item name="android:paddingLeft">8dip</item>
+        <item name="android:paddingRight">8dip</item>
+        <item name="android:layout_height">48dip</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColorHint">@color/greySub</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="EditText.Area">
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">12dip</item>
+        <item name="android:hint">请输入内容</item>
+        <item name="android:minHeight">64dip</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="EditText.Number">
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:minWidth">96dip</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">32dip</item>
+        <item name="android:paddingTop">8dip</item>
+        <item name="android:inputType">number</item>
+        <item name="android:paddingLeft">12dip</item>
+        <item name="android:paddingRight">12dip</item>
+        <item name="android:paddingBottom">8dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/border_background</item>
+    </style>
+
+    <style name="EditText.Mobile">
+        <item name="android:maxLines">1</item>
+        <item name="android:maxLength">11</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:hint">请输入手机号码</item>
+        <item name="android:paddingLeft">12dip</item>
+        <item name="android:paddingRight">12dip</item>
+        <item name="android:layout_height">48dip</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColorHint">@color/greySub</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="EditText.Search">
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:hint">请输入关键字</item>
+        <item name="android:paddingLeft">8dip</item>
+        <item name="android:paddingRight">8dip</item>
+        <item name="android:layout_height">32dip</item>
+        <item name="android:drawablePadding">4dip</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:imeOptions">actionSearch</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColorHint">@color/greySub</item>
+        <item name="android:background">@drawable/border_background</item>
+    </style>
+
+    <style name="EditText.Username">
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:hint">请输入账户名</item>
+        <item name="android:paddingLeft">12dip</item>
+        <item name="android:paddingRight">12dip</item>
+        <item name="android:layout_height">48dip</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColorHint">@color/greySub</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="EditText.Password">
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">12dip</item>
+        <item name="android:hint">请输入账户密码</item>
+        <item name="android:paddingRight">12dip</item>
+        <item name="android:layout_height">48dip</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColorHint">@color/greySub</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="EditText.Selector">
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:inputType">number</item>
+        <item name="android:layout_width">32dip</item>
+        <item name="android:layout_height">24dip</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:layout_marginLeft">4dip</item>
+        <item name="android:layout_marginRight">4dip</item>
+        <item name="android:background">@drawable/border_grey_sub</item>
+    </style>
+
+    <style name="EditText.SearchToolbar">
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:focusable">false</item>
+        <item name="android:hint">点击进行搜索</item>
+        <item name="android:paddingLeft">8dip</item>
+        <item name="android:paddingRight">8dip</item>
+        <item name="android:layout_height">32dip</item>
+        <item name="android:drawablePadding">4dip</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:imeOptions">actionSearch</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColorHint">@color/whiteAdd</item>
+        <item name="android:drawableLeft">@drawable/ic_search_hint</item>
+        <item name="android:background">@drawable/border_primary_add</item>
+    </style>
+
+    <!-- ImageView -->
+
+    <style name="ImageView" />
+
+    <style name="ImageView.Item">
+        <item name="android:scaleType">center</item>
+        <item name="android:layout_width">24dip</item>
+        <item name="android:layout_height">24dip</item>
+        <item name="android:src">@drawable/ic_more_horiz</item>
+    </style>
+
+    <style name="ImageView.Main">
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="ImageView.Avatar">
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_width">88dip</item>
+        <item name="android:layout_height">88dip</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="ImageView.Store">
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_width">64dip</item>
+        <item name="android:layout_height">64dip</item>
+        <item name="android:layout_marginEnd">8dip</item>
+        <item name="android:layout_marginLeft">8dip</item>
+        <item name="android:src">@mipmap/ic_launcher</item>
+    </style>
+
+    <style name="ImageView.Goods">
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_height">200dip</item>
+        <item name="android:src">@mipmap/ic_launcher</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="ImageView.Toolbar">
+        <item name="android:scaleType">center</item>
+        <item name="android:layout_width">48dip</item>
+        <item name="android:layout_height">48dip</item>
+    </style>
+
+    <style name="ImageView.GoodsVer">
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_width">100dip</item>
+        <item name="android:layout_height">100dip</item>
+        <item name="android:src">@mipmap/ic_launcher</item>
+    </style>
+
+</resources>

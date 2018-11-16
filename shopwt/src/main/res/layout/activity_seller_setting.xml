@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="主营商品"
+                android:textColor="@color/greyAdd"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/goodsEditText"
+                style="@style/EditText.Username"
+                android:hint="请输入主营商品"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:layout_marginTop="1px"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="联系 Q Q "
+                android:textColor="@color/greyAdd"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/qqEditText"
+                style="@style/EditText.Username"
+                android:hint="请输入QQ号码"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:layout_marginTop="1px"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="阿里旺旺"
+                android:textColor="@color/greyAdd"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/wwEditText"
+                style="@style/EditText.Username"
+                android:hint="请输入阿里旺旺"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:layout_marginTop="1px"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="Se关键字"
+                android:textColor="@color/greyAdd"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/seoEditText"
+                style="@style/EditText.Username"
+                android:hint="请输入SEO关键字"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:layout_marginTop="1px"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="店铺描述"
+                android:textColor="@color/greyAdd"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/descEditText"
+                style="@style/EditText.Username"
+                android:hint="店铺描述"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:layout_marginTop="1px"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="店铺电话"
+                android:textColor="@color/greyAdd"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/phoneEditText"
+                style="@style/EditText.Username"
+                android:hint="店铺描述"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/saveTextView"
+            style="@style/TextView.Button"
+            android:text="保存信息"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

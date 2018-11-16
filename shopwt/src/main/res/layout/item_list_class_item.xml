@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Wrap"
+    android:padding="2dip">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/nameTextView"
+        style="@style/TextView.Small"
+        android:layout_width="match_parent"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:background="@drawable/selector_border_white"
+        android:gravity="center"
+        android:padding="8dip"
+        android:textColor="@color/title" />
+
+</android.support.v7.widget.LinearLayoutCompat>

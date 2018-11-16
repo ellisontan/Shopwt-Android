@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Wrap">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        style="@style/Layout.Wrap"
+        android:background="@drawable/selector_color_white">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/storeNameTextView"
+            style="@style/TextView.ToolTitle"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:drawableLeft="@mipmap/ic_store_goods"
+            android:drawablePadding="4dip"
+            android:drawableStart="@mipmap/ic_store_goods"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip" />
+
+        <View
+            android:id="@+id/mansongLineView"
+            style="@style/View.Line" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/manSongLinearLayout"
+            style="@style/Layout.Horizontal"
+            android:layout_height="40dip"
+            android:paddingBottom="8dip"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:paddingTop="8dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.GoodsActivity"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/specChooseTextView"
+                android:layout_alignTop="@+id/specChooseTextView"
+                android:layout_toEndOf="@+id/specChooseTextView"
+                android:layout_toRightOf="@+id/specChooseTextView"
+                android:text="满即送"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/manSongDescTextView"
+                style="@style/TextView.Small"
+                android:layout_height="match_parent"
+                android:paddingLeft="4dip"
+                android:paddingRight="4dip" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/manSongGoodsImageView"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <View style="@style/View.Line" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mainRecyclerView"
+            style="@style/Layout.Main"
+            android:paddingBottom="4dip"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:paddingTop="4dip" />
+
+        <View
+            android:id="@+id/voucherLineView"
+            style="@style/View.Line" />
+
+        <RelativeLayout
+            android:id="@+id/voucherRelativeLayout"
+            style="@style/Layout.Wrap"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:layout_height="40dip"
+                android:text="店铺代金券"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/voucherMoneyTextView"
+                style="@style/TextView.ToolValue"
+                android:layout_height="40dip"
+                android:textColor="@color/primary"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <View style="@style/View.Line" />
+
+        <RelativeLayout
+            style="@style/Layout.Wrap"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:layout_height="40dip"
+                android:text="物流配送"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/logisticsMoneyTextView"
+                style="@style/TextView.ToolValue"
+                android:layout_height="40dip"
+                android:textColor="@color/primary"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <View style="@style/View.Line" />
+
+        <RelativeLayout
+            style="@style/Layout.Wrap"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:layout_height="40dip"
+                android:text="本店合计"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/totalMoneyTextView"
+                style="@style/TextView.ToolValue"
+                android:layout_height="40dip"
+                android:textColor="@color/primary"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/messageEditText"
+            style="@style/EditText.Area"
+            android:layout_height="48dip"
+            android:layout_marginBottom="12dip"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/border_background"
+            android:hint="请输入订单留言"
+            android:padding="8dip"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <View
+        style="@style/View.Line"
+        android:layout_height="12dip" />
+
+</android.support.v7.widget.LinearLayoutCompat>

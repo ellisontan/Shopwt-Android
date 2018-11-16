@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/toolbarLinearLayout"
+        style="@style/Layout.Horizontal"
+        android:layout_height="48dip"
+        android:background="@color/primary">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/scanImageView"
+            style="@style/ImageView.Toolbar"
+            android:background="@drawable/selector_color_primary"
+            android:src="@drawable/ic_action_scan_white" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/searchEditText"
+            style="@style/EditText.SearchToolbar" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/messageImageView"
+            style="@style/ImageView.Toolbar"
+            android:background="@drawable/selector_color_primary"
+            android:src="@drawable/ic_action_message_white" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <top.yokey.shopwt.view.PullRefreshView
+        android:id="@+id/classPullRefreshView"
+        style="@style/Layout.Main"
+        android:layout_width="72dip"
+        android:layout_below="@+id/toolbarLinearLayout"
+        android:background="@color/white" />
+
+    <View
+        android:id="@+id/lineView"
+        style="@style/View.Horizontal"
+        android:layout_below="@+id/toolbarLinearLayout"
+        android:layout_toEndOf="@+id/classPullRefreshView"
+        android:layout_toRightOf="@+id/classPullRefreshView" />
+
+    <top.yokey.shopwt.view.PullRefreshView
+        android:id="@+id/brandRecommendPullRefreshView"
+        style="@style/Layout.Main"
+        android:layout_below="@+id/toolbarLinearLayout"
+        android:layout_toEndOf="@+id/lineView"
+        android:layout_toRightOf="@+id/lineView"
+        android:background="@color/white" />
+
+    <top.yokey.shopwt.view.PullRefreshView
+        android:id="@+id/classChildPullRefreshView"
+        style="@style/Layout.Main"
+        android:layout_below="@+id/toolbarLinearLayout"
+        android:layout_toEndOf="@+id/lineView"
+        android:layout_toRightOf="@+id/lineView"
+        android:visibility="gone" />
+
+</RelativeLayout>

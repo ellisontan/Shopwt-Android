@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/lineView"
+        style="@style/View.Line"
+        android:layout_below="@+id/mainToolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/mainScrollView"
+        style="@style/Layout.Main"
+        android:layout_above="@+id/exchangeTextView"
+        android:layout_below="@+id/lineView">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/contentLinearLayout"
+            style="@style/Layout.Main">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/mainImageView"
+                style="@style/ImageView.Main"
+                android:layout_height="256dip" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/nameTextView"
+                style="@style/TextView.Name"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:paddingBottom="4dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:paddingTop="8dip"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                style="@style/Layout.Wrap"
+                android:background="@color/white"
+                android:paddingBottom="8dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:paddingTop="4dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/moneyTextView"
+                    style="@style/TextView.Money"
+                    android:layout_marginEnd="4dip"
+                    android:layout_marginRight="4dip"
+                    android:textSize="14sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/priceTextView"
+                    style="@style/TextView.Normal"
+                    android:layout_alignBottom="@+id/moneyTextView"
+                    android:layout_alignTop="@+id/moneyTextView"
+                    android:layout_toEndOf="@+id/moneyTextView"
+                    android:layout_toRightOf="@+id/moneyTextView"
+                    android:gravity="center"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:textColor="@color/grey" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/saleTextView"
+                    style="@style/TextView.Small"
+                    android:layout_alignBottom="@+id/moneyTextView"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/moneyTextView" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/storeNameTextView"
+                style="@style/TextView.ToolTitle"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginTop="16dip"
+                android:background="@color/white"
+                android:drawableLeft="@mipmap/ic_store_goods"
+                android:drawablePadding="8dip"
+                android:drawableStart="@mipmap/ic_store_goods"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:text="兑换详细"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/View.Line" />
+
+            <WebView
+                android:id="@+id/mainWebView"
+                style="@style/Layout.Main" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/nightTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/chooseRelativeLayout"
+        android:background="@color/backgroundStore"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/chooseRelativeLayout"
+        style="@style/Layout.Wrap"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/exchangeTextView"
+        android:background="@color/white"
+        android:padding="16dip"
+        android:visibility="gone">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/chooseGoodsImageView"
+            style="@style/ImageView.GoodsVer"
+            android:layout_width="64dip"
+            android:layout_height="64dip"
+            android:layout_marginEnd="8dip"
+            android:layout_marginRight="8dip" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/chooseNameTextView"
+            style="@style/TextView.Name"
+            android:layout_width="match_parent"
+            android:layout_toEndOf="@+id/chooseGoodsImageView"
+            android:layout_toRightOf="@+id/chooseGoodsImageView" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/chooseMoneyTextView"
+            style="@style/TextView.Money"
+            android:layout_below="@+id/chooseNameTextView"
+            android:layout_toEndOf="@+id/chooseGoodsImageView"
+            android:layout_toRightOf="@+id/chooseGoodsImageView" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/chooseStorageTextView"
+            style="@style/TextView.Small"
+            android:layout_alignBottom="@+id/chooseMoneyTextView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/chooseMoneyTextView" />
+
+        <View
+            android:id="@+id/chooseLineView"
+            style="@style/View.Line"
+            android:layout_below="@+id/chooseGoodsImageView"
+            android:layout_marginBottom="8dip"
+            android:layout_marginTop="8dip" />
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/TextView.Small"
+            android:layout_alignBottom="@+id/chooseSubTextView"
+            android:layout_alignTop="@+id/chooseSubTextView"
+            android:layout_below="@+id/chooseLineView"
+            android:text="购买数量"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/chooseSubTextView"
+            style="@style/TextView.Selector"
+            android:layout_below="@+id/chooseLineView"
+            android:layout_toLeftOf="@+id/chooseNumberEditText"
+            android:layout_toStartOf="@id/chooseNumberEditText"
+            android:text="-"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/chooseNumberEditText"
+            style="@style/EditText.Selector"
+            android:layout_below="@+id/chooseLineView"
+            android:layout_toLeftOf="@+id/chooseAddTextView"
+            android:layout_toStartOf="@+id/chooseAddTextView"
+            android:imeOptions="actionDone"
+            android:text="1"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/chooseAddTextView"
+            style="@style/TextView.Selector"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/chooseLineView"
+            android:text="+"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/exchangeTextView"
+        style="@style/TextView.Button"
+        android:layout_height="48dip"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="0dip"
+        android:background="@drawable/selector_color_primary"
+        android:text="立即兑换"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

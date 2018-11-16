@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Item"
+    android:background="@color/transparent">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/mainImageView"
+        style="@style/ImageView.GoodsVer"
+        android:layout_width="56dip"
+        android:layout_height="56dip"
+        android:layout_marginEnd="8dip"
+        android:layout_marginRight="8dip" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/nameTextView"
+        style="@style/TextView.Name"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/specTextView"
+        style="@style/TextView.Small"
+        android:layout_below="@+id/nameTextView"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView" />
+
+</RelativeLayout>

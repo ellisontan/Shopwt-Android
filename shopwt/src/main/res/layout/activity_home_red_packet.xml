@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Main"
+    android:background="@mipmap/bg_red_packet"
+    tools:ignore="Overdraw">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/toolbarLinearLayout"
+        style="@style/Layout.Horizontal"
+        android:layout_height="48dip"
+        android:layout_marginTop="24dip">
+
+        <android.support.v7.widget.AppCompatImageView
+            style="@style/ImageView.Toolbar"
+            android:src="@drawable/ic_action_back_white" />
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/TextView.Title"
+            android:text="返回"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        style="@style/Layout.Horizontal"
+        android:layout_below="@+id/toolbarLinearLayout"
+        android:padding="16dip">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="56dip"
+            android:layout_height="56dip"
+            android:src="@mipmap/ic_red_packet_avatar" />
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/TextView.Normal"
+            android:layout_marginLeft="16dip"
+            android:layout_marginStart="16dip"
+            android:background="@drawable/border_white_4dip"
+            android:padding="8dip"
+            android:text="温馨提示：抽到的红包金额放入您的预存款里，可当现金使用"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:id="@+id/redPacketRelativeLayout"
+        style="@style/Layout.Wrap"
+        android:layout_centerInParent="true">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/redPacketTextView"
+            style="@style/TextView.Normal"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/bg_red_packet_money"
+            android:gravity="center"
+            android:text="￥"
+            android:textColor="@color/primary"
+            android:textSize="36sp"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/TextView.Normal"
+            android:layout_alignBottom="@+id/redPacketTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dip"
+            android:background="@drawable/border_red_packet"
+            android:paddingBottom="4dip"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:paddingTop="4dip"
+            android:text="免费领红包"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        style="@style/TextView.Smalls"
+        android:layout_below="@+id/redPacketRelativeLayout"
+        android:layout_centerHorizontal="true"
+        android:padding="8dip"
+        android:text="活动最终解释权归本网站所有"
+        android:textColor="@color/greySub"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

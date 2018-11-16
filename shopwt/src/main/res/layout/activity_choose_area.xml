@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        style="@style/Layout.Horizontal"
+        android:layout_height="40dip"
+        android:background="@color/white">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/provinceTextView"
+            style="@style/TextView.Normal"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:text="省份"
+            tools:ignore="HardcodedText" />
+
+        <View style="@style/View.Horizontal" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/cityTextView"
+            style="@style/TextView.Normal"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:text="城市"
+            tools:ignore="HardcodedText" />
+
+        <View style="@style/View.Horizontal" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/areaTextView"
+            style="@style/TextView.Normal"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:text="地区"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        style="@style/Layout.Horizontal"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/provinceRecyclerView"
+            style="@style/Layout.Main"
+            android:layout_weight="1" />
+
+        <View style="@style/View.Horizontal" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cityRecyclerView"
+            style="@style/Layout.Main"
+            android:layout_weight="1" />
+
+        <View style="@style/View.Horizontal" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/areaRecyclerView"
+            style="@style/Layout.Main"
+            android:layout_weight="1" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

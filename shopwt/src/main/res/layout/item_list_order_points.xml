@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Wrap"
+    android:background="@drawable/selector_color_white">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/storeLinearLayout"
+        style="@style/Layout.Horizontal"
+        android:layout_height="40dip"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/storeNameTextView"
+            style="@style/TextView.ToolTitle"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/ic_store_goods"
+            android:drawablePadding="4dip"
+            android:drawableStart="@mipmap/ic_store_goods" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/storeDescTextView"
+            style="@style/TextView.ToolValueDot"
+            android:layout_height="40dip" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <View style="@style/View.Line" />
+
+    <RelativeLayout
+        style="@style/Layout.Item"
+        android:background="@color/transparent">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/mainImageView"
+            style="@style/ImageView.GoodsVer"
+            android:layout_width="56dip"
+            android:layout_height="56dip"
+            android:layout_marginEnd="8dip"
+            android:layout_marginRight="8dip" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/nameTextView"
+            style="@style/TextView.Name"
+            android:layout_toEndOf="@+id/mainImageView"
+            android:layout_toRightOf="@+id/mainImageView"
+            android:textSize="12sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/pointsTextView"
+            style="@style/TextView.Money"
+            android:layout_alignBottom="@+id/mainImageView"
+            android:layout_marginEnd="4dip"
+            android:layout_marginRight="4dip"
+            android:layout_toEndOf="@+id/mainImageView"
+            android:layout_toRightOf="@+id/mainImageView"
+            android:textSize="12sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/numberTextView"
+            style="@style/TextView.Small"
+            android:layout_alignBottom="@+id/mainImageView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/totalTextView"
+        style="@style/TextView.Small"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:ellipsize="end"
+        android:gravity="end|center"
+        android:maxLines="1"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip" />
+
+    <View style="@style/View.Line" />
+
+    <RelativeLayout
+        style="@style/Layout.Wrap"
+        android:layout_height="40dip"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/optionTextView"
+            style="@style/TextView.Small"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dip"
+            android:layout_marginRight="8dip"
+            android:layout_toLeftOf="@+id/operaTextView"
+            android:layout_toStartOf="@+id/operaTextView"
+            android:background="@drawable/selector_border_selector"
+            android:paddingBottom="4dip"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:paddingTop="4dip"
+            android:text="option"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/operaTextView"
+            style="@style/TextView.Small"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_border_primary"
+            android:paddingBottom="4dip"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:paddingTop="4dip"
+            android:text="opera"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/View.Line"
+        android:layout_height="8dip" />
+
+</android.support.v7.widget.LinearLayoutCompat>

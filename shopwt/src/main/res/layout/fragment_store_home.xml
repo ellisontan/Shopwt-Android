@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainScrollView"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/mainLinearLayout"
+        style="@style/Layout.Main">
+
+        <RelativeLayout
+            android:id="@+id/headerRelativeLayout"
+            style="@style/Layout.Wrap"
+            android:layout_height="120dip">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/backgroundImageView"
+                style="@style/ImageView.Main"
+                android:src="@mipmap/bg_mine" />
+
+            <android.support.v7.widget.AppCompatImageView
+                style="@style/ImageView.Main"
+                android:background="@color/backgroundStore" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/avatarImageView"
+                style="@style/ImageView.Store"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="16dip" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/nameTextView"
+                style="@style/TextView.Max"
+                android:layout_alignTop="@+id/avatarImageView"
+                android:layout_toEndOf="@+id/avatarImageView"
+                android:layout_toRightOf="@+id/avatarImageView"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/favoritesTextView"
+                style="@style/TextView.Smalls"
+                android:layout_alignBottom="@+id/avatarImageView"
+                android:layout_toLeftOf="@+id/numberTextView"
+                android:layout_toStartOf="@+id/numberTextView"
+                android:background="@color/primary"
+                android:paddingBottom="4dip"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:paddingTop="4dip"
+                android:textColor="@color/white" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/numberTextView"
+                style="@style/TextView.Smalls"
+                android:layout_alignBottom="@+id/avatarImageView"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="16dip"
+                android:layout_marginRight="16dip"
+                android:background="@color/primaryAdd"
+                android:paddingBottom="4dip"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:paddingTop="4dip"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <com.youth.banner.Banner
+            android:id="@+id/mainBanner"
+            android:layout_width="match_parent"
+            android:layout_height="160dip"
+            android:layout_marginTop="16dip" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Horizontal"
+            android:layout_height="40dip"
+            android:layout_marginTop="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/favoritesRankTextView"
+                style="@style/TextView.Small"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white"
+                android:gravity="center"
+                android:text="收藏排行"
+                android:textColor="@color/primary"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/saleRankTextView"
+                style="@style/TextView.Small"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white"
+                android:gravity="center"
+                android:text="销量排行"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <View style="@style/View.Line" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/favoritesRankLinearLayout"
+            style="@style/Layout.Horizontal"
+            android:layout_height="240dip">
+
+            <RelativeLayout
+                style="@style/Layout.Main"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/favoritesRankOneImageView"
+                    style="@style/ImageView.Main"
+                    android:src="@mipmap/ic_launcher" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/favoritesRankOneTextView"
+                    style="@style/TextView.Small"
+                    android:layout_width="match_parent"
+                    android:layout_alignBottom="@+id/favoritesRankOneImageView"
+                    android:background="@color/backgroundName"
+                    android:maxLines="1"
+                    android:padding="4dip"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <View style="@style/View.Horizontal" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Main"
+                android:layout_weight="2">
+
+                <RelativeLayout
+                    style="@style/Layout.Main"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/favoritesRankTwoImageView"
+                        style="@style/ImageView.Main"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/favoritesRankTwoTextView"
+                        style="@style/TextView.Small"
+                        android:layout_width="match_parent"
+                        android:layout_alignBottom="@+id/favoritesRankTwoImageView"
+                        android:background="@color/backgroundName"
+                        android:maxLines="1"
+                        android:padding="4dip"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+                <View style="@style/View.Line" />
+
+                <RelativeLayout
+                    style="@style/Layout.Main"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/favoritesRankThrImageView"
+                        style="@style/ImageView.Main"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/favoritesRankThrTextView"
+                        style="@style/TextView.Small"
+                        android:layout_width="match_parent"
+                        android:layout_alignBottom="@+id/favoritesRankThrImageView"
+                        android:background="@color/backgroundName"
+                        android:maxLines="1"
+                        android:padding="4dip"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/saleRankLinearLayout"
+            style="@style/Layout.Horizontal"
+            android:layout_height="240dip"
+            android:visibility="gone">
+
+            <RelativeLayout
+                style="@style/Layout.Main"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/saleRankOneImageView"
+                    style="@style/ImageView.Main"
+                    android:src="@mipmap/ic_launcher" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/saleRankOneTextView"
+                    style="@style/TextView.Small"
+                    android:layout_width="match_parent"
+                    android:layout_alignBottom="@+id/saleRankOneImageView"
+                    android:background="@color/backgroundName"
+                    android:maxLines="1"
+                    android:padding="4dip"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <View style="@style/View.Horizontal" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Main"
+                android:layout_weight="2">
+
+                <RelativeLayout
+                    style="@style/Layout.Main"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/saleRankTwoImageView"
+                        style="@style/ImageView.Main"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/saleRankTwoTextView"
+                        style="@style/TextView.Small"
+                        android:layout_width="match_parent"
+                        android:layout_alignBottom="@+id/saleRankTwoImageView"
+                        android:background="@color/backgroundName"
+                        android:maxLines="1"
+                        android:padding="4dip"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+                <View style="@style/View.Line" />
+
+                <RelativeLayout
+                    style="@style/Layout.Main"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/saleRankThrImageView"
+                        style="@style/ImageView.Main"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/saleRankThrTextView"
+                        style="@style/TextView.Small"
+                        android:layout_width="match_parent"
+                        android:layout_alignBottom="@+id/saleRankThrImageView"
+                        android:background="@color/backgroundName"
+                        android:maxLines="1"
+                        android:padding="4dip"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/TextView.Line"
+            android:layout_marginTop="8dip"
+            android:paddingLeft="4dip"
+            android:paddingRight="4dip"
+            android:text="店主推荐"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mainRecyclerView"
+            style="@style/Layout.Main" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v4.widget.NestedScrollView>

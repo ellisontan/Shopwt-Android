@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainScrollView"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/mainLinearLayout"
+        style="@style/Layout.Main">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/mineLinearLayout"
+            style="@style/Layout.Wrap"
+            android:background="@mipmap/bg_mine"
+            android:paddingTop="24dip">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/avatarImageView"
+                style="@style/ImageView.Avatar"
+                android:layout_marginTop="16dip"
+                android:src="@mipmap/ic_default_avatar_circle" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/nicknameTextView"
+                style="@style/TextView.Title"
+                android:layout_gravity="center"
+                android:text="点击登录"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Horizontal"
+                android:background="@color/backgroundMine">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/goodsTextView"
+                    style="@style/TextView.NavigationMine"
+                    android:drawableTop="@mipmap/ic_mine_header_goods"
+                    android:text="商品"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/storeTextView"
+                    style="@style/TextView.NavigationMine"
+                    android:drawableTop="@mipmap/ic_mine_header_store"
+                    android:text="店铺"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/footprintTextView"
+                    style="@style/TextView.NavigationMine"
+                    android:drawableTop="@mipmap/ic_mine_header_footprint"
+                    android:text="我的足迹"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/signTextView"
+                    style="@style/TextView.NavigationMine"
+                    android:drawableTop="@mipmap/ic_mine_header_sign"
+                    android:text="每日签到"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:id="@+id/orderRelativeLayout"
+            style="@style/Layout.Tool"
+            android:layout_marginTop="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:drawableLeft="@mipmap/ic_mine_order"
+                android:drawableStart="@mipmap/ic_mine_order"
+                android:text="我的订单"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolValueDot"
+                android:text="查看全部订单"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+        <View style="@style/View.Line" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Horizontal"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/waitPaymentRelativeLayout"
+                style="@style/Layout.Wrap"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/waitPaymentTextView"
+                    style="@style/TextView.NavigationOrder"
+                    android:drawableTop="@mipmap/ic_mine_order_wait_pay"
+                    android:text="待付款"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/waitPaymentDotTextView"
+                    style="@style/TextView.PrimaryDot"
+                    android:layout_marginTop="8dip"
+                    android:layout_toEndOf="@+id/waitPaymentTextView"
+                    android:layout_toRightOf="@+id/waitPaymentTextView"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/waitReceiptRelativeLayout"
+                style="@style/Layout.Wrap"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/waitReceiptTextView"
+                    style="@style/TextView.NavigationOrder"
+                    android:drawableTop="@mipmap/ic_mine_order_wait_drive"
+                    android:text="待收货"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/waitReceiptDotTextView"
+                    style="@style/TextView.PrimaryDot"
+                    android:layout_marginTop="8dip"
+                    android:layout_toEndOf="@+id/waitReceiptTextView"
+                    android:layout_toRightOf="@+id/waitReceiptTextView"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/waitTakesRelativeLayout"
+                style="@style/Layout.Wrap"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/waitTakesTextView"
+                    style="@style/TextView.NavigationOrder"
+                    android:drawableTop="@mipmap/ic_mine_order_wait_receipt"
+                    android:text="待自提"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/waitTakesDotTextView"
+                    style="@style/TextView.PrimaryDot"
+                    android:layout_marginTop="8dip"
+                    android:layout_toEndOf="@+id/waitTakesTextView"
+                    android:layout_toRightOf="@+id/waitTakesTextView"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/waitEvaluateRelativeLayout"
+                style="@style/Layout.Wrap"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/waitEvaluateTextView"
+                    style="@style/TextView.NavigationOrder"
+                    android:drawableTop="@mipmap/ic_mine_order_wait_evaluate"
+                    android:text="待评价"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/waitEvaluateDotTextView"
+                    style="@style/TextView.PrimaryDot"
+                    android:layout_marginTop="8dip"
+                    android:layout_toEndOf="@+id/waitEvaluateTextView"
+                    android:layout_toRightOf="@+id/waitEvaluateTextView"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/waitReturnRelativeLayout"
+                style="@style/Layout.Wrap"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/waitReturnTextView"
+                    style="@style/TextView.NavigationOrder"
+                    android:drawableTop="@mipmap/ic_mine_order_wait_refund"
+                    android:text="退货/款"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/waitReturnDotTextView"
+                    style="@style/TextView.PrimaryDot"
+                    android:layout_marginTop="8dip"
+                    android:layout_toEndOf="@+id/waitReturnTextView"
+                    android:layout_toRightOf="@+id/waitReturnTextView"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:id="@+id/propertyRelativeLayout"
+            style="@style/Layout.Tool"
+            android:layout_marginTop="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:drawableLeft="@mipmap/ic_mine_property"
+                android:drawableStart="@mipmap/ic_mine_property"
+                android:text="我的财产"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolValueDot"
+                android:text="查看全部财产"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+        <View style="@style/View.Line" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Horizontal"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/preDepositTextView"
+                style="@style/TextView.NavigationOrder"
+                android:background="@drawable/selector_color_white"
+                android:drawableTop="@mipmap/ic_mine_property_pre_deposit"
+                android:text="预存款"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/rechargeCardTextView"
+                style="@style/TextView.NavigationOrder"
+                android:background="@drawable/selector_color_white"
+                android:drawableTop="@mipmap/ic_mine_property_recharge_card"
+                android:text="充值卡"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/voucherTextView"
+                style="@style/TextView.NavigationOrder"
+                android:background="@drawable/selector_color_white"
+                android:drawableTop="@mipmap/ic_mine_property_voucher"
+                android:text="代金券"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/redPacketTextView"
+                style="@style/TextView.NavigationOrder"
+                android:background="@drawable/selector_color_white"
+                android:drawableTop="@mipmap/ic_mine_property_red_packet"
+                android:text="红包"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pointsTextView"
+                style="@style/TextView.NavigationOrder"
+                android:background="@drawable/selector_color_white"
+                android:drawableTop="@mipmap/ic_mine_property_points"
+                android:text="积分"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Horizontal"
+            android:layout_marginTop="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/inviteTextView"
+                style="@style/TextView.Smalls"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white"
+                android:drawablePadding="4dip"
+                android:drawableTop="@mipmap/ic_mine_block_invite"
+                android:gravity="center"
+                android:paddingBottom="16dip"
+                android:paddingTop="16dip"
+                android:text="邀请返利"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/View.Horizontal" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/distributionTextView"
+                style="@style/TextView.Smalls"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white"
+                android:drawablePadding="4dip"
+                android:drawableTop="@mipmap/ic_mine_block_distribution"
+                android:gravity="center"
+                android:paddingBottom="16dip"
+                android:paddingTop="16dip"
+                android:text="分销收入"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/View.Horizontal" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/addressTextView"
+                style="@style/TextView.Smalls"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white"
+                android:drawablePadding="4dip"
+                android:drawableTop="@mipmap/ic_mine_block_address"
+                android:gravity="center"
+                android:paddingBottom="16dip"
+                android:paddingTop="16dip"
+                android:text="收货地址"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/View.Horizontal" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/sellerTextView"
+                style="@style/TextView.Smalls"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white"
+                android:drawablePadding="4dip"
+                android:drawableTop="@mipmap/ic_mine_block_store"
+                android:gravity="center"
+                android:paddingBottom="16dip"
+                android:paddingTop="16dip"
+                android:text="商家中心"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <View style="@style/View.Line" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/exchangeTextView"
+                style="@style/TextView.Smalls"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white"
+                android:drawablePadding="4dip"
+                android:drawableTop="@mipmap/ic_mine_block_points"
+                android:gravity="center"
+                android:paddingBottom="16dip"
+                android:paddingTop="16dip"
+                android:text="积分兑换"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/View.Horizontal" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/feedbackTextView"
+                style="@style/TextView.Smalls"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white"
+                android:drawablePadding="4dip"
+                android:drawableTop="@mipmap/ic_mine_block_feedback"
+                android:gravity="center"
+                android:paddingBottom="16dip"
+                android:paddingTop="16dip"
+                android:text="意见反馈"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/View.Horizontal" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/settingTextView"
+                style="@style/TextView.Smalls"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white"
+                android:drawablePadding="4dip"
+                android:drawableTop="@mipmap/ic_mine_block_setting"
+                android:gravity="center"
+                android:paddingBottom="16dip"
+                android:paddingTop="16dip"
+                android:text="系统设置"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/View.Horizontal" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Smalls"
+                android:layout_weight="1"
+                android:background="@drawable/selector_color_white"
+                android:drawablePadding="4dip"
+                android:drawableTop="@mipmap/ic_mine_block_store"
+                android:gravity="center"
+                android:paddingBottom="16dip"
+                android:paddingTop="16dip"
+                android:text="商家中心"
+                android:visibility="invisible"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v4.widget.NestedScrollView>

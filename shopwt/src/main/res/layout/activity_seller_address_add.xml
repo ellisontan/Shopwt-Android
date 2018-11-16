@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/toolbarImageView"
+            style="@style/ImageView.Toolbar"
+            android:layout_gravity="end" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:layout_marginTop="16dip"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="联系的人"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/nameEditText"
+                style="@style/EditText.Username"
+                android:layout_weight="1"
+                android:hint="请输入联系人姓名"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:layout_marginTop="1px"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="联系手机"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/mobileEditText"
+                style="@style/EditText.Mobile"
+                android:hint="请输入手机号码"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:layout_marginTop="1px"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="地区选择"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/areaEditText"
+                style="@style/EditText.Username"
+                android:focusable="false"
+                android:hint="请选择地区"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:layout_marginTop="1px"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="详细地址"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/addressEditText"
+                style="@style/EditText.Username"
+                android:hint="请输入详细地址"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:layout_marginTop="1px"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="默认地址"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/defaultSwitch"
+                android:layout_width="56dip"
+                android:layout_height="48dip" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/saveTextView"
+            style="@style/TextView.Button"
+            android:text="保存地址"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

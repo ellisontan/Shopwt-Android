@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:layout_marginTop="16dip"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="账 户"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/usernameEditText"
+                style="@style/EditText.Username" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:layout_marginTop="1px"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="密 码"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/passwordEditText"
+                style="@style/EditText.Password" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/loginTextView"
+            style="@style/TextView.Button"
+            android:text="登 录"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

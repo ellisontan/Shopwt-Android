@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Main">
+
+    <top.yokey.shopwt.view.PullRefreshView
+        android:id="@+id/mainPullRefreshView"
+        style="@style/Layout.Main"
+        android:layout_marginTop="48dip" />
+
+    <include layout="@layout/include_goods_screen" />
+
+</RelativeLayout>

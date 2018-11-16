@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="IconDuplicates">
+        <ignore path="src/main/res/mipmap-xxhdpi/ic_navigation_store_activity.png" />
+        <ignore path="src/main/res/mipmap-xxhdpi/ic_navigation_store_activity_press.png" />
+        <ignore path="src/main/res/mipmap-xxhdpi/ic_navigation_store_goods.png" />
+        <ignore path="src/main/res/mipmap-xxhdpi/ic_navigation_store_goods_press.png" />
+        <ignore path="src/main/res/mipmap-xxhdpi/ic_navigation_store_home.png" />
+        <ignore path="src/main/res/mipmap-xxhdpi/ic_navigation_store_home_press.png" />
+        <ignore path="src/main/res/mipmap-xxhdpi/ic_navigation_store_new.png" />
+        <ignore path="src/main/res/mipmap-xxhdpi/ic_navigation_store_new_press.png" />
+        <ignore path="src/main/res/mipmap-xxhdpi/ic_register_mobile.png" />
+        <ignore path="src/main/res/mipmap-xxhdpi/ic_register_mobile_press.png" />
+        <ignore path="src/main/res/mipmap-xxhdpi/ic_register_normal.png" />
+        <ignore path="src/main/res/mipmap-xxhdpi/ic_register_normal_press.png" />
+    </issue>
+    <issue id="IconLocation">
+        <ignore path="src/main/res/drawable/bg_red_packet.9.png" />
+    </issue>
+</lint>

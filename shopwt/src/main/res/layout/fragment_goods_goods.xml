@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/mainScrollView"
+        style="@style/Layout.Main"
+        android:layout_above="@+id/lineView">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/contentLinearLayout"
+            style="@style/Layout.Main">
+
+            <RelativeLayout
+                android:id="@+id/headerRelativeLayout"
+                style="@style/Layout.Wrap"
+                android:layout_height="240dip">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/mainBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/favoritesImageView"
+                    style="@style/ImageView.Toolbar"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="16dip"
+                    android:layout_toLeftOf="@+id/shareImageView"
+                    android:layout_toStartOf="@+id/shareImageView"
+                    android:background="@drawable/border_white_20dip"
+                    android:src="@drawable/ic_favorite_primary" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/shareImageView"
+                    style="@style/ImageView.Toolbar"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="16dip"
+                    android:background="@drawable/border_white_20dip"
+                    android:src="@drawable/ic_share_primary" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/saleRelativeLayout"
+                style="@style/Layout.Wrap"
+                android:layout_height="32dip"
+                android:layout_below="@+id/mainBanner"
+                android:background="@mipmap/bg_sale">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/saleTypeTextView"
+                    style="@style/TextView.Normal"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@mipmap/ic_sale_time"
+                    android:drawablePadding="8dip"
+                    android:drawableStart="@mipmap/ic_sale_time"
+                    android:paddingLeft="16dip"
+                    android:paddingRight="16dip"
+                    android:textColor="@color/white" />
+
+                <top.yokey.shopwt.view.CountdownTextView
+                    android:id="@+id/saleTimeTextView"
+                    style="@style/TextView.Normal"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="16dip"
+                    android:paddingRight="16dip"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Wrap"
+                android:background="@color/white"
+                android:padding="8dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/nameTextView"
+                    style="@style/TextView.Name"
+                    android:layout_width="match_parent"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/descTextView"
+                    style="@style/TextView.Name"
+                    android:layout_width="match_parent"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="8dip"
+                    android:textColor="@color/grey" />
+
+                <RelativeLayout
+                    style="@style/Layout.Wrap"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="8dip">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/moneyTextView"
+                        style="@style/TextView.Money"
+                        android:layout_marginEnd="4dip"
+                        android:layout_marginRight="4dip" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/marketPriceTextView"
+                        style="@style/TextView.Small"
+                        android:layout_alignBottom="@id/moneyTextView"
+                        android:layout_alignTop="@+id/moneyTextView"
+                        android:layout_marginEnd="4dip"
+                        android:layout_marginRight="4dip"
+                        android:layout_toEndOf="@+id/moneyTextView"
+                        android:layout_toRightOf="@+id/moneyTextView" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/mobileTextView"
+                        style="@style/TextView.ItemMobileHave"
+                        android:layout_alignBottom="@id/marketPriceTextView"
+                        android:layout_alignTop="@+id/marketPriceTextView"
+                        android:layout_toEndOf="@+id/marketPriceTextView"
+                        android:layout_toRightOf="@+id/marketPriceTextView"
+                        android:visibility="gone" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/saleTextView"
+                        style="@style/TextView.Small"
+                        android:layout_alignBottom="@+id/moneyTextView"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/moneyTextView" />
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:id="@+id/activityLinearLayout"
+                    style="@style/Layout.Horizontal"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="8dip">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/TextView.Smalls"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="4dip"
+                        android:layout_marginRight="4dip"
+                        android:text="促销"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/activityTitleTextView"
+                        style="@style/TextView.GoodsActivity"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="4dip"
+                        android:layout_marginRight="4dip" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/activityDescTextView"
+                        style="@style/TextView.Smalls"
+                        android:layout_height="match_parent" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:id="@+id/manSongLinearLayout"
+                    style="@style/Layout.Horizontal"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="4dip">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/TextView.Smalls"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="4dip"
+                        android:layout_marginRight="4dip"
+                        android:text="满送"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/TextView.GoodsActivity"
+                        android:layout_marginEnd="4dip"
+                        android:layout_marginRight="4dip"
+                        android:text="满即送"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/manSongDescTextView"
+                        style="@style/TextView.Smalls"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="4dip"
+                        android:layout_marginRight="4dip" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/manSongGoodsImageView"
+                        android:layout_width="16dip"
+                        android:layout_height="16dip" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/voucherTextView"
+                style="@style/TextView.Tool"
+                android:drawableLeft="@mipmap/ic_voucher_goods"
+                android:drawableStart="@mipmap/ic_voucher_goods"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:text="点击领取店铺代金券"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/View.Line" />
+
+            <RelativeLayout
+                android:id="@+id/areaRelativeLayout"
+                style="@style/Layout.Horizontal"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="8dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:paddingTop="8dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/areaSendTextView"
+                    style="@style/TextView.Small"
+                    android:layout_marginEnd="4dip"
+                    android:layout_marginRight="4dip"
+                    android:text="送至"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/areaAddressTextView"
+                    style="@style/TextView.Money"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dip"
+                    android:layout_marginRight="4dip"
+                    android:layout_toEndOf="@+id/areaSendTextView"
+                    android:layout_toRightOf="@+id/areaSendTextView"
+                    android:text="全国"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/areaHaveTextView"
+                    style="@style/TextView.Small"
+                    android:layout_marginEnd="4dip"
+                    android:layout_marginRight="4dip"
+                    android:layout_toEndOf="@+id/areaAddressTextView"
+                    android:layout_toRightOf="@+id/areaAddressTextView"
+                    android:text="有货"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/areaChooseTextView"
+                    style="@style/TextView.Small"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/areaAddressTextView"
+                    android:layout_alignStart="@+id/areaAddressTextView"
+                    android:layout_below="@+id/areaAddressTextView"
+                    android:layout_marginTop="4dip"
+                    android:text="点击选择送货地区"
+                    android:textColor="@color/grey"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_location_goods" />
+
+            </RelativeLayout>
+
+            <View style="@style/View.Line" />
+
+            <RelativeLayout
+                android:id="@+id/specRelativeLayout"
+                style="@style/Layout.Horizontal"
+                android:layout_height="40dip"
+                android:background="@drawable/selector_color_white"
+                android:paddingBottom="8dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:paddingTop="8dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/specChooseTextView"
+                    style="@style/TextView.Small"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dip"
+                    android:layout_marginRight="4dip"
+                    android:text="已选"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/specOneTextView"
+                    style="@style/TextView.GoodsActivity"
+                    android:layout_alignBottom="@+id/specChooseTextView"
+                    android:layout_alignTop="@+id/specChooseTextView"
+                    android:layout_toEndOf="@+id/specChooseTextView"
+                    android:layout_toRightOf="@+id/specChooseTextView"
+                    android:text="默认"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/specTwoTextView"
+                    style="@style/TextView.GoodsActivity"
+                    android:layout_alignBottom="@+id/specChooseTextView"
+                    android:layout_alignTop="@+id/specChooseTextView"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginStart="8dip"
+                    android:layout_toEndOf="@+id/specOneTextView"
+                    android:layout_toRightOf="@+id/specOneTextView"
+                    android:text="默认"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="16dip"
+                    android:layout_height="16dip"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_dot_right" />
+
+            </RelativeLayout>
+
+            <View style="@style/View.Line" />
+
+            <RelativeLayout
+                style="@style/Layout.Horizontal"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="8dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:paddingTop="8dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/serviceServiceTextView"
+                    style="@style/TextView.Small"
+                    android:layout_marginEnd="4dip"
+                    android:layout_marginRight="4dip"
+                    android:text="服务"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/serviceDescTextView"
+                    style="@style/TextView.Small"
+                    android:layout_marginEnd="4dip"
+                    android:layout_marginRight="4dip"
+                    android:layout_toEndOf="@+id/serviceServiceTextView"
+                    android:layout_toRightOf="@+id/serviceServiceTextView" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/serviceSevDayTextView"
+                    style="@style/TextView.Small"
+                    android:layout_below="@+id/serviceDescTextView"
+                    android:layout_marginEnd="8dip"
+                    android:layout_marginRight="8dip"
+                    android:layout_marginTop="4dip"
+                    android:layout_toEndOf="@+id/serviceServiceTextView"
+                    android:layout_toRightOf="@+id/serviceServiceTextView"
+                    android:drawableLeft="@mipmap/ic_goods_sev_day"
+                    android:drawablePadding="4dip"
+                    android:drawableStart="@mipmap/ic_goods_sev_day"
+                    android:text="7天退货"
+                    android:textColor="@color/primary"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/serviceQualityTextView"
+                    style="@style/TextView.Small"
+                    android:layout_below="@+id/serviceDescTextView"
+                    android:layout_marginEnd="8dip"
+                    android:layout_marginRight="8dip"
+                    android:layout_marginTop="4dip"
+                    android:layout_toEndOf="@+id/serviceSevDayTextView"
+                    android:layout_toRightOf="@+id/serviceSevDayTextView"
+                    android:drawableLeft="@mipmap/ic_goods_quality"
+                    android:drawablePadding="4dip"
+                    android:drawableStart="@mipmap/ic_goods_quality"
+                    android:text="品质承诺"
+                    android:textColor="@color/primary"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/serviceReissueTextView"
+                    style="@style/TextView.Small"
+                    android:layout_below="@+id/serviceDescTextView"
+                    android:layout_marginEnd="8dip"
+                    android:layout_marginRight="8dip"
+                    android:layout_marginTop="4dip"
+                    android:layout_toEndOf="@+id/serviceQualityTextView"
+                    android:layout_toRightOf="@+id/serviceQualityTextView"
+                    android:drawableLeft="@mipmap/ic_goods_reissue"
+                    android:drawablePadding="4dip"
+                    android:drawableStart="@mipmap/ic_goods_reissue"
+                    android:text="破损补寄"
+                    android:textColor="@color/primary"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/serviceLogisticsTextView"
+                    style="@style/TextView.Small"
+                    android:layout_below="@+id/serviceDescTextView"
+                    android:layout_marginEnd="8dip"
+                    android:layout_marginRight="8dip"
+                    android:layout_marginTop="4dip"
+                    android:layout_toEndOf="@+id/serviceReissueTextView"
+                    android:layout_toRightOf="@+id/serviceReissueTextView"
+                    android:drawableLeft="@mipmap/ic_goods_logistics"
+                    android:drawablePadding="4dip"
+                    android:drawableStart="@mipmap/ic_goods_logistics"
+                    android:text="急速物流"
+                    android:textColor="@color/primary"
+                    tools:ignore="HardcodedText" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/evaluateRelativeLayout"
+                style="@style/Layout.Horizontal"
+                android:layout_height="40dip"
+                android:layout_marginTop="16dip"
+                android:background="@drawable/selector_color_white"
+                android:paddingBottom="8dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:paddingTop="8dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/evaluateServiceTextView"
+                    style="@style/TextView.Small"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dip"
+                    android:layout_marginRight="4dip"
+                    android:text="商品评价"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/evaluateDescTextView"
+                    style="@style/TextView.Small"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dip"
+                    android:layout_marginRight="4dip"
+                    android:layout_toEndOf="@+id/evaluateServiceTextView"
+                    android:layout_toRightOf="@+id/evaluateServiceTextView"
+                    android:text="好评率100%"
+                    android:textColor="@color/primary"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/evaluateNumberTextView"
+                    style="@style/TextView.Small"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:drawableEnd="@mipmap/ic_dot_right"
+                    android:drawableRight="@mipmap/ic_dot_right" />
+
+            </RelativeLayout>
+
+            <View style="@style/View.Line" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/evaluateRecyclerView"
+                style="@style/Layout.Main"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/storeRelativeLayout"
+                style="@style/Layout.Tool"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/storeNameTextView"
+                    style="@style/TextView.ToolTitle"
+                    android:layout_height="40dip"
+                    android:drawableLeft="@mipmap/ic_store_goods"
+                    android:drawablePadding="4dip"
+                    android:drawableStart="@mipmap/ic_store_goods"
+                    android:text="店铺名字"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/storeOwnTextView"
+                    style="@style/TextView.ToolValueDot"
+                    android:layout_height="40dip"
+                    android:text="自营店铺"
+                    android:textColor="@color/primary"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:id="@+id/storeLineView"
+                    style="@style/View.Line"
+                    android:layout_below="@+id/storeNameTextView" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    style="@style/Layout.Horizontal"
+                    android:layout_height="40dip"
+                    android:layout_below="@+id/storeLineView">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/TextView.Small"
+                        android:layout_height="match_parent"
+                        android:text="描述相符："
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/storeDescTextView"
+                        style="@style/TextView.Small"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/primary" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/storeDescPercentTextView"
+                        style="@style/TextView.GoodsActivity"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dip" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/TextView.Small"
+                        android:layout_height="match_parent"
+                        android:text="服务态度："
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/storeServiceTextView"
+                        style="@style/TextView.Small"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/primary" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/storeServicePercentTextView"
+                        style="@style/TextView.GoodsActivity"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dip" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/TextView.Small"
+                        android:layout_height="match_parent"
+                        android:text="发货速度："
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/storeDeliveryTextView"
+                        style="@style/TextView.Small"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/primary" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/storeDeliveryPercentTextView"
+                        style="@style/TextView.GoodsActivity"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dip" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Tool"
+                android:layout_height="40dip"
+                android:layout_marginTop="16dip"
+                android:background="@color/white"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:text="店铺推荐"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+            <View style="@style/View.Line" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/commendRecyclerView"
+                style="@style/Layout.Main"
+                android:background="@color/white"
+                android:padding="8dip" />
+
+            <View
+                style="@style/View.Line"
+                android:layout_height="16dip" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/nightTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lineView"
+        android:background="@color/backgroundStore"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/chooseRelativeLayout"
+        style="@style/Layout.Wrap"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lineView"
+        android:background="@color/white"
+        android:padding="16dip"
+        android:visibility="gone">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/chooseGoodsImageView"
+            style="@style/ImageView.GoodsVer"
+            android:layout_width="64dip"
+            android:layout_height="64dip"
+            android:layout_marginEnd="8dip"
+            android:layout_marginRight="8dip" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/chooseNameTextView"
+            style="@style/TextView.Name"
+            android:layout_width="match_parent"
+            android:layout_toEndOf="@+id/chooseGoodsImageView"
+            android:layout_toRightOf="@+id/chooseGoodsImageView" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/chooseMoneyTextView"
+            style="@style/TextView.Money"
+            android:layout_below="@+id/chooseNameTextView"
+            android:layout_toEndOf="@+id/chooseGoodsImageView"
+            android:layout_toRightOf="@+id/chooseGoodsImageView" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/chooseStorageTextView"
+            style="@style/TextView.Small"
+            android:layout_alignBottom="@+id/chooseMoneyTextView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/chooseMoneyTextView" />
+
+        <View
+            android:id="@+id/chooseLineOneView"
+            style="@style/View.Line"
+            android:layout_below="@+id/chooseGoodsImageView"
+            android:layout_marginBottom="8dip"
+            android:layout_marginTop="8dip"
+            tools:ignore="TooManyViews" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/chooseValueOneTextView"
+            style="@style/TextView.Small"
+            android:layout_below="@+id/chooseLineOneView"
+            android:padding="0dip"
+            android:textColor="@color/greyAdd" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chooseValueOneRecyclerView"
+            style="@style/Layout.Wrap"
+            android:layout_below="@+id/chooseValueOneTextView"
+            android:layout_marginTop="8dip" />
+
+        <View
+            android:id="@+id/chooseLineTwoView"
+            style="@style/View.Line"
+            android:layout_below="@+id/chooseValueOneRecyclerView"
+            android:layout_marginBottom="8dip"
+            android:layout_marginTop="8dip"
+            tools:ignore="TooManyViews" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/chooseValueTwoTextView"
+            style="@style/TextView.Small"
+            android:layout_below="@+id/chooseLineTwoView"
+            android:padding="0dip"
+            android:textColor="@color/greyAdd"
+            tools:ignore="TooManyViews" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chooseValueTwoRecyclerView"
+            style="@style/Layout.Wrap"
+            android:layout_below="@+id/chooseValueTwoTextView"
+            android:layout_marginTop="8dip" />
+
+        <View
+            android:id="@+id/chooseLineThrView"
+            style="@style/View.Line"
+            android:layout_below="@+id/chooseValueTwoRecyclerView"
+            android:layout_marginBottom="12dip"
+            android:layout_marginTop="12dip" />
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/TextView.Small"
+            android:layout_alignBottom="@+id/chooseSubTextView"
+            android:layout_alignTop="@+id/chooseSubTextView"
+            android:text="购买数量"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/chooseSubTextView"
+            style="@style/TextView.Selector"
+            android:layout_alignBottom="@+id/chooseAddTextView"
+            android:layout_alignTop="@+id/chooseAddTextView"
+            android:layout_toLeftOf="@+id/chooseNumberEditText"
+            android:layout_toStartOf="@id/chooseNumberEditText"
+            android:text="-"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/chooseNumberEditText"
+            style="@style/EditText.Selector"
+            android:layout_alignBottom="@+id/chooseAddTextView"
+            android:layout_alignTop="@+id/chooseAddTextView"
+            android:layout_toLeftOf="@+id/chooseAddTextView"
+            android:layout_toStartOf="@+id/chooseAddTextView"
+            android:imeOptions="actionDone"
+            android:text="1"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/chooseAddTextView"
+            style="@style/TextView.Selector"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/chooseLineThrView"
+            android:text="+"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/lineView"
+        style="@style/View.Line"
+        android:layout_above="@+id/bottomLinearLayout"
+        tools:ignore="TooManyViews" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/bottomLinearLayout"
+        style="@style/Layout.Horizontal"
+        android:layout_height="48dip"
+        android:layout_alignParentBottom="true">
+
+        <top.yokey.shopwt.view.CenterTextView
+            android:id="@+id/customerTextView"
+            style="@style/TextView.Normal"
+            android:layout_height="48dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_color_white"
+            android:drawableLeft="@mipmap/ic_goods_message"
+            android:drawablePadding="4dip"
+            android:drawableStart="@mipmap/ic_goods_message"
+            android:text="客服"
+            tools:ignore="HardcodedText" />
+
+        <View style="@style/View.Horizontal" />
+
+        <top.yokey.shopwt.view.CenterTextView
+            android:id="@+id/cartTextView"
+            style="@style/TextView.Normal"
+            android:layout_height="48dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_color_white"
+            android:drawableLeft="@mipmap/ic_goods_cart"
+            android:drawablePadding="4dip"
+            android:drawableStart="@mipmap/ic_goods_cart"
+            android:text="购物车"
+            tools:ignore="HardcodedText" />
+
+        <View style="@style/View.Horizontal" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/addCartTextView"
+            style="@style/TextView.Normal"
+            android:layout_height="48dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_color_primary"
+            android:gravity="center"
+            android:text="加入购物车"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/buyTextView"
+            style="@style/TextView.Normal"
+            android:layout_height="48dip"
+            android:layout_weight="1"
+            android:background="@drawable/selector_color_red"
+            android:gravity="center"
+            android:text="立即购买"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/voucherLinearLayout"
+        style="@style/Layout.Wrap"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:padding="16dip"
+        android:visibility="gone">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/voucherStoreNameTextView"
+            style="@style/TextView.ToolTitle"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_store_goods"
+            android:drawablePadding="4dip"
+            android:drawableStart="@mipmap/ic_store_goods"
+            android:text="店铺名字"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <View
+            style="@style/View.Line"
+            android:layout_marginBottom="8dip"
+            android:layout_marginTop="12dip" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/voucherRecyclerView"
+            style="@style/Layout.Main" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</RelativeLayout>

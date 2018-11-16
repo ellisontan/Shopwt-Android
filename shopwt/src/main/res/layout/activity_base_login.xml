@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/mainScrollView"
+        style="@style/Layout.Main">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/contentLinearLayout"
+            style="@style/Layout.Main">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="16dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="账 户"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/usernameEditText"
+                    style="@style/EditText.Username" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="密 码"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/passwordEditText"
+                    style="@style/EditText.Password" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <RelativeLayout
+                style="@style/Layout.Wrap"
+                android:layout_height="24dip"
+                android:layout_marginTop="16dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/registerTextView"
+                    style="@style/TextView.Normal"
+                    android:layout_height="24dip"
+                    android:text="注册账号"
+                    android:textColor="@color/primary"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/findPassTextView"
+                    style="@style/TextView.Normal"
+                    android:layout_height="24dip"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="忘记密码？"
+                    android:textColor="@color/boy"
+                    tools:ignore="HardcodedText" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/loginTextView"
+                style="@style/TextView.Button"
+                android:text="登 录"
+                tools:ignore="HardcodedText" />
+
+            <RelativeLayout
+                android:id="@+id/thirdRelativeLayout"
+                style="@style/Layout.Wrap"
+                android:layout_marginTop="96dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/thirdTextView"
+                    style="@style/TextView.Small"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="24dip"
+                    android:text="------------ 使用第三方登录 ------------"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/wxImageView"
+                    android:layout_width="56dip"
+                    android:layout_height="56dip"
+                    android:layout_below="@+id/thirdTextView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="24dip"
+                    android:layout_marginRight="24dip"
+                    android:background="@drawable/border_login_third"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_classic_wechat" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/qqImageView"
+                    android:layout_width="56dip"
+                    android:layout_height="56dip"
+                    android:layout_below="@+id/thirdTextView"
+                    android:layout_toLeftOf="@+id/wxImageView"
+                    android:layout_toStartOf="@+id/wxImageView"
+                    android:background="@drawable/border_login_third"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_classic_qq" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/wbImageView"
+                    android:layout_width="56dip"
+                    android:layout_height="56dip"
+                    android:layout_below="@+id/thirdTextView"
+                    android:layout_toEndOf="@+id/wxImageView"
+                    android:layout_toRightOf="@+id/wxImageView"
+                    android:background="@drawable/border_login_third"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_classic_sinaweibo" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.v7.widget.LinearLayoutCompat>

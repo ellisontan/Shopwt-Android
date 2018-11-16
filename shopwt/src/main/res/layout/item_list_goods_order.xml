@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Wrap"
+    android:paddingBottom="4dip"
+    android:paddingTop="4dip">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/mainImageView"
+        style="@style/ImageView.GoodsVer"
+        android:layout_width="56dip"
+        android:layout_height="56dip"
+        android:layout_marginEnd="8dip"
+        android:layout_marginRight="8dip" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/nameTextView"
+        style="@style/TextView.Name"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toLeftOf="@+id/moneyTextView"
+        android:layout_toRightOf="@+id/mainImageView"
+        android:layout_toStartOf="@+id/moneyTextView"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/specTextView"
+        style="@style/TextView.Small"
+        android:layout_below="@+id/nameTextView"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/moneyTextView"
+        style="@style/TextView.Money"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/numberTextView"
+        style="@style/TextView.Small"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/moneyTextView" />
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <com.scrollablelayout.ScrollableLayout
+        android:id="@+id/mainScrollableLayout"
+        style="@style/Layout.Main">
+
+        <RelativeLayout
+            android:id="@+id/headerRelativeLayout"
+            style="@style/Layout.Wrap"
+            android:background="@mipmap/bg_mine"
+            android:padding="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/signTextView"
+                style="@style/TextView.Normal"
+                android:layout_width="96dip"
+                android:layout_height="96dip"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="24dip"
+                android:layout_marginTop="24dip"
+                android:background="@mipmap/bg_mine_sign"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textColor="@color/primary" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pointsRelativeLayout"
+            style="@style/Layout.Tool"
+            android:layout_height="40dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:text="签到日记"
+                android:textColor="@color/greyAdd"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolValue"
+                android:text="查看我的积分"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+        <View style="@style/View.Line" />
+
+        <top.yokey.shopwt.view.PullRefreshView
+            android:id="@+id/mainPullRefreshView"
+            style="@style/Layout.Main" />
+
+    </com.scrollablelayout.ScrollableLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

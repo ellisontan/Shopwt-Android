@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/contentLinearLayout"
+        style="@style/Layout.Main">
+
+        <RelativeLayout
+            android:id="@+id/pushRelativeLayout"
+            style="@style/Layout.Tool"
+            android:layout_marginTop="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:text="接收推送消息"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/pushSwitch"
+                style="@style/Layout.Main"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/imageRelativeLayout"
+            style="@style/Layout.Tool"
+            android:layout_marginTop="1px">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:text="有图模式"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/imageSwitch"
+                style="@style/Layout.Main"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/updateRelativeLayout"
+            style="@style/Layout.Tool"
+            android:layout_marginTop="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:text="检查更新"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/updateTextView"
+                style="@style/TextView.ToolValueDot"
+                android:text="有新版本！"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/aboutRelativeLayout"
+            style="@style/Layout.Tool"
+            android:layout_marginTop="1px">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.ToolTitle"
+                android:text="关于我们"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/aboutTextView"
+                style="@style/TextView.ToolValueDot" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

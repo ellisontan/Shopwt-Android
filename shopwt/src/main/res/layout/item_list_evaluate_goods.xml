@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Item"
+    android:layout_marginBottom="8dip">
+
+    <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/mainImageView"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:src="@mipmap/ic_default_avatar" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/nameTextView"
+            style="@style/TextView.Name"
+            android:layout_height="32dip"
+            android:layout_weight="1"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/timeTextView"
+            style="@style/TextView.Time"
+            android:layout_height="32dip"
+            android:textSize="12sp" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <View
+        style="@style/View.Line"
+        android:layout_marginBottom="8dip"
+        android:layout_marginTop="8dip" />
+
+    <android.support.v7.widget.AppCompatRatingBar
+        android:id="@+id/scoreRatingBar"
+        style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/contentTextView"
+        style="@style/TextView.Small"
+        android:layout_marginTop="4dip"
+        android:textColor="@color/blackSub" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/imageLinearLayout"
+        style="@style/Layout.Horizontal"
+        android:layout_marginTop="4dip">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/oneImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:scaleType="fitXY" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/twoImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:scaleType="fitXY" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/thrImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:scaleType="fitXY" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/fouImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:scaleType="fitXY" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/fivImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:scaleType="fitXY" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/explainTextView"
+        style="@style/TextView.Small"
+        android:layout_marginTop="4dip"
+        android:background="@drawable/border_girl_2dip"
+        android:padding="4dip"
+        android:textColor="@color/white" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/appendTimeTextView"
+        style="@style/TextView.Small"
+        android:layout_marginTop="4dip" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/appendTextView"
+        style="@style/TextView.Small"
+        android:layout_marginTop="4dip"
+        android:textColor="@color/blackSub" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/appendLinearLayout"
+        style="@style/Layout.Horizontal"
+        android:layout_marginTop="4dip">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/appendOneImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:scaleType="fitXY" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/appendTwoImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:scaleType="fitXY" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/appendThrImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:scaleType="fitXY" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/appendFouImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:scaleType="fitXY" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/appendFivImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:scaleType="fitXY" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/appendExplainTextView"
+        style="@style/TextView.Small"
+        android:layout_marginTop="4dip"
+        android:background="@drawable/border_boy_2dip"
+        android:padding="4dip"
+        android:textColor="@color/white" />
+
+</android.support.v7.widget.LinearLayoutCompat>

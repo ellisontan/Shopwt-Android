@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Item">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/mainTextView"
+        style="@style/TextView.Normal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/moneyTextView"
+        android:layout_toStartOf="@+id/moneyTextView"
+        android:textColor="@color/blackSub" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/timeTextView"
+        style="@style/TextView.Time"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/mainTextView"
+        android:layout_marginTop="2dip"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/moneyTextView"
+        style="@style/TextView.Money"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textSize="18sp" />
+
+</RelativeLayout>

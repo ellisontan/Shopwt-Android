@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Wrap"
+    android:padding="0dip">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/nameTextView"
+        style="@style/TextView.Normal"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/selector_color_white"
+        android:drawableEnd="@mipmap/ic_dot_right"
+        android:drawableRight="@mipmap/ic_dot_right"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip" />
+
+    <View style="@style/View.Line" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mainRecyclerView"
+        style="@style/Layout.Main" />
+
+</android.support.v7.widget.LinearLayoutCompat>

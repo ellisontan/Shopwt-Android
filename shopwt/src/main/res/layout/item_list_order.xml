@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Wrap">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mainRecyclerView"
+        style="@style/Layout.Main" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/payTextView"
+        style="@style/TextView.Button"
+        android:text="订单支付"
+        tools:ignore="HardcodedText" />
+
+</android.support.v7.widget.LinearLayoutCompat>

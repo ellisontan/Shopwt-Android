@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Wrap"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/platformTextView"
+                style="@style/TextView.ToolNav"
+                android:background="@drawable/border_toolbar_left_press"
+                android:text="平台优惠券"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/storeTextView"
+                style="@style/TextView.ToolNav"
+                android:background="@drawable/border_toolbar_right"
+                android:text="店铺代金券"
+                android:textColor="@color/greyAdd"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <top.yokey.shopwt.view.PullRefreshView
+        android:id="@+id/mainPullRefreshView"
+        style="@style/Layout.Main" />
+
+</android.support.v7.widget.LinearLayoutCompat>

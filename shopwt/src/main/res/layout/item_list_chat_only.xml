@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Wrap"
+    android:paddingBottom="4dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="4dip">
+
+    <RelativeLayout
+        android:id="@+id/friendRelativeLayout"
+        style="@style/Layout.Wrap"
+        android:layout_marginEnd="56dip"
+        android:layout_marginRight="56dip">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/friendImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_marginEnd="8dip"
+            android:layout_marginRight="8dip"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_default_avatar" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/friendContentTextView"
+            style="@style/TextView.Chat"
+            android:layout_toEndOf="@+id/friendImageView"
+            android:layout_toRightOf="@+id/friendImageView"
+            android:background="@drawable/bg_chat_friend" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/friendContentImageView"
+            android:layout_width="128dip"
+            android:layout_height="128dip"
+            android:layout_toEndOf="@+id/friendImageView"
+            android:layout_toRightOf="@+id/friendImageView"
+            android:background="@drawable/bg_chat_friend"
+            android:scaleType="centerCrop" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mineRelativeLayout"
+        style="@style/Layout.Wrap"
+        android:layout_marginLeft="56dip"
+        android:layout_marginStart="56dip">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/mineImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="8dip"
+            android:layout_marginStart="8dip"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_default_avatar" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/mineContentTextView"
+            style="@style/TextView.Chat"
+            android:layout_toLeftOf="@+id/mineImageView"
+            android:layout_toStartOf="@+id/mineImageView"
+            android:background="@drawable/bg_chat_mine" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/mineContentImageView"
+            android:layout_width="128dip"
+            android:layout_height="128dip"
+            android:layout_toLeftOf="@+id/mineImageView"
+            android:layout_toStartOf="@+id/mineImageView"
+            android:background="@drawable/bg_chat_mine"
+            android:scaleType="centerCrop" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

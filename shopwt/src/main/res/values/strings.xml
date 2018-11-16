@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--suppress ALL -->
+
+<resources>
+
+    <string name="app_name">Shopwt</string>
+
+    <!-- 通用 -->
+
+    <string name="home">首页</string>
+    <string name="mine">我的</string>
+    <string name="cancel">取消</string>
+    <string name="search">搜索</string>
+    <string name="cart">购物车</string>
+    <string name="confirm">确认</string>
+    <string name="mobile">手机号码</string>
+    <string name="success">成功</string>
+    <string name="failure">失败</string>
+    <string name="handler">处理中</string>
+    <string name="classification">分类</string>
+
+    <string name="sms_verify">短信验证</string>
+    <string name="data_empty">数据为空</string>
+    <string name="data_error">数据错误</string>
+    <string name="get_verify_code">获取验证码</string>
+    <string name="network_timeout">网络超时</string>
+    <string name="data_parse_error">数据解析错误</string>
+    <string name="return_one_more_time">再按一次返回</string>
+
+    <string name="confirm_your_choice">确认您的选择</string>
+    <string name="data_loading_failed_do_you_try_again">数据加载失败，是否重试</string>
+
+</resources>

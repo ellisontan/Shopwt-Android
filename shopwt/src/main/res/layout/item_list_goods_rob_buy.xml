@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Item">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/mainImageView"
+        style="@style/ImageView.GoodsVer"
+        android:layout_marginEnd="8dip"
+        android:layout_marginRight="8dip" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/nameTextView"
+        style="@style/TextView.Name"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/moneyTextView"
+        style="@style/TextView.Money"
+        android:layout_below="@+id/nameTextView"
+        android:layout_marginTop="4dip"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/priceTextView"
+        style="@style/TextView.Normal"
+        android:layout_alignBottom="@+id/moneyTextView"
+        android:layout_alignTop="@+id/moneyTextView"
+        android:layout_toEndOf="@+id/moneyTextView"
+        android:layout_toRightOf="@+id/moneyTextView"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip" />
+
+    <top.yokey.shopwt.view.CountdownTextView
+        android:id="@+id/timeTextView"
+        style="@style/TextView.Time"
+        android:layout_alignBottom="@+id/moneyTextView"
+        android:layout_alignTop="@+id/moneyTextView"
+        android:gravity="center" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/numberTextView"
+        style="@style/TextView.Smalls"
+        android:layout_height="24dip"
+        android:layout_below="@+id/moneyTextView"
+        android:layout_marginTop="4dip"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView"
+        android:background="@drawable/border_goods_rob_buy"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip"
+        android:textColor="@color/primary" />
+
+    <android.support.v7.widget.AppCompatTextView
+        style="@style/TextView.Button"
+        android:layout_width="64dip"
+        android:layout_height="24dip"
+        android:layout_alignBottom="@+id/numberTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/numberTextView"
+        android:layout_margin="0dip"
+        android:text="马上抢"
+        android:textSize="12sp"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

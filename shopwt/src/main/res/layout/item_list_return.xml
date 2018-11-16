@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Wrap"
+    android:background="@drawable/selector_color_white">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/storeLinearLayout"
+        style="@style/Layout.Horizontal"
+        android:layout_height="40dip"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/storeNameTextView"
+            style="@style/TextView.ToolTitle"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/ic_store_goods"
+            android:drawablePadding="4dip"
+            android:drawableStart="@mipmap/ic_store_goods" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/storeDescTextView"
+            style="@style/TextView.ToolValueDot"
+            android:layout_height="40dip" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <View style="@style/View.Line" />
+
+    <RelativeLayout
+        android:id="@+id/goodsRelativeLayout"
+        style="@style/Layout.Wrap"
+        android:paddingBottom="8dip"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip"
+        android:paddingTop="8dip">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/goodsImageView"
+            style="@style/ImageView.GoodsVer"
+            android:layout_width="56dip"
+            android:layout_height="56dip"
+            android:layout_marginEnd="8dip"
+            android:layout_marginRight="8dip" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/goodsNameTextView"
+            style="@style/TextView.Name"
+            android:layout_toEndOf="@+id/goodsImageView"
+            android:layout_toRightOf="@+id/goodsImageView"
+            android:textSize="12sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/goodsSpecTextView"
+            style="@style/TextView.Small"
+            android:layout_below="@+id/goodsNameTextView"
+            android:layout_toEndOf="@+id/goodsImageView"
+            android:layout_toRightOf="@+id/goodsImageView" />
+
+    </RelativeLayout>
+
+    <View style="@style/View.Line" />
+
+    <RelativeLayout
+        style="@style/Layout.Wrap"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip">
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/TextView.ToolTitle"
+            android:layout_height="40dip"
+            android:text="申请时间"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/timeTextView"
+            style="@style/TextView.ToolValue"
+            android:layout_height="40dip"
+            android:textColor="@color/primary"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <View style="@style/View.Line" />
+
+    <RelativeLayout
+        style="@style/Layout.Wrap"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip">
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/TextView.ToolTitle"
+            android:layout_height="40dip"
+            android:text="退款金额"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/moneyTextView"
+            style="@style/TextView.ToolValue"
+            android:layout_height="40dip"
+            android:textColor="@color/primary"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <View style="@style/View.Line" />
+
+    <RelativeLayout
+        style="@style/Layout.Wrap"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip">
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/TextView.ToolTitle"
+            android:layout_height="40dip"
+            android:text="退货数量"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/numberTextView"
+            style="@style/TextView.ToolValue"
+            android:layout_height="40dip"
+            android:textColor="@color/primary"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <View style="@style/View.Line" />
+
+    <RelativeLayout
+        style="@style/Layout.Wrap"
+        android:layout_height="40dip"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/operaTextView"
+            style="@style/TextView.Small"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_border_primary"
+            android:paddingBottom="4dip"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:paddingTop="4dip"
+            android:text="opera"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/View.Line"
+        android:layout_height="8dip" />
+
+</android.support.v7.widget.LinearLayoutCompat>

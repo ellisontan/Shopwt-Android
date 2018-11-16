@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/lineView"
+        style="@style/View.Line"
+        android:layout_below="@+id/mainToolbar" />
+
+    <top.yokey.shopwt.view.PullRefreshView
+        android:id="@+id/mainPullRefreshView"
+        style="@style/Layout.Main"
+        android:layout_above="@+id/bottomLinearLayout"
+        android:layout_below="@+id/lineView" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/bottomLinearLayout"
+        style="@style/Layout.Horizontal"
+        android:layout_height="48dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageImageView"
+            style="@style/ImageView.Toolbar"
+            android:src="@drawable/ic_input_image" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/contentEditText"
+            style="@style/EditText.Search"
+            android:layout_height="28dip"
+            android:background="@drawable/border_background" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/sendTextView"
+            style="@style/TextView.Small"
+            android:layout_width="56dip"
+            android:layout_height="match_parent"
+            android:layout_margin="10dip"
+            android:background="@drawable/selector_border_primary"
+            android:gravity="center"
+            android:text="发 送"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/showImageView"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="16dip"
+        android:background="@drawable/border_chat_goods"
+        android:scaleType="center"
+        android:src="@mipmap/ic_chat_goods" />
+
+    <RelativeLayout
+        android:id="@+id/goodsRelativeLayout"
+        style="@style/Layout.Item"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dip"
+        android:layout_marginStart="16dip"
+        android:layout_toLeftOf="@+id/showImageView"
+        android:layout_toStartOf="@+id/showImageView"
+        android:padding="8dip">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/goodsImageView"
+            style="@style/ImageView.GoodsVer"
+            android:layout_width="56dip"
+            android:layout_height="56dip"
+            android:layout_marginEnd="8dip"
+            android:layout_marginRight="8dip" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/goodsTextView"
+            style="@style/TextView.Normal"
+            android:layout_toEndOf="@+id/goodsImageView"
+            android:layout_toRightOf="@+id/goodsImageView"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="12sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/moneyTextView"
+            style="@style/TextView.Money"
+            android:layout_below="@+id/goodsTextView"
+            android:layout_toEndOf="@+id/goodsImageView"
+            android:layout_toRightOf="@+id/goodsImageView"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

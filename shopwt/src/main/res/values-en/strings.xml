@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--suppress ALL -->
+
+<resources>
+
+    <string name="app_name">ShopNC</string>
+
+    <!-- 通用 -->
+
+    <string name="home">Home</string>
+    <string name="mine">Mine</string>
+    <string name="cancel">Cancel</string>
+    <string name="search">Search</string>
+    <string name="cart">Cart</string>
+    <string name="confirm">Confirm</string>
+    <string name="mobile">Mobile</string>
+    <string name="success">Success</string>
+    <string name="failure">Failure</string>
+    <string name="handler">Handler</string>
+    <string name="classification">Class</string>
+
+    <string name="sms_verify">Sms verify</string>
+    <string name="data_empty">Data empty</string>
+    <string name="data_error">Data error</string>
+    <string name="get_verify_code">Get verify code</string>
+    <string name="network_timeout">Network timeout</string>
+    <string name="data_parse_error">Data parse error</string>
+    <string name="return_one_more_time">Return one more time</string>
+
+    <string name="confirm_your_choice">Confirm your choice</string>
+    <string name="data_loading_failed_do_you_try_again">Data loading failed Do you try again</string>
+
+</resources>

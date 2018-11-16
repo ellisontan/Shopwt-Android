@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/mansongCardView"
+        style="@style/Layout.Wrap"
+        android:layout_marginLeft="16dip"
+        android:layout_marginRight="16dip"
+        android:layout_marginTop="16dip"
+        android:foreground="?attr/selectableItemBackground">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/manSongLinearLayout"
+            style="@style/Layout.Wrap"
+            android:padding="8dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/manSongNameTextView"
+                style="@style/TextView.GoodsActivity"
+                android:background="@color/primary"
+                android:paddingBottom="4dip"
+                android:paddingTop="4dip" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/manSongTimeTextView"
+                style="@style/TextView.Time"
+                android:layout_marginTop="4dip" />
+
+            <View
+                style="@style/View.Line"
+                android:layout_marginBottom="4dip"
+                android:layout_marginTop="4dip" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/manSongDescTextView"
+                style="@style/TextView.GoodsActivity"
+                android:background="@color/girl"
+                android:gravity="center_vertical"
+                android:paddingBottom="4dip"
+                android:paddingTop="4dip" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/manSongRemarkTextView"
+                style="@style/TextView.Time"
+                android:layout_marginTop="4dip" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/xianshiCardView"
+        style="@style/Layout.Wrap"
+        android:layout_marginLeft="16dip"
+        android:layout_marginRight="16dip"
+        android:layout_marginTop="16dip"
+        android:foreground="?attr/selectableItemBackground">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Wrap"
+            android:padding="8dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/xianshiNameTextView"
+                style="@style/TextView.GoodsActivity"
+                android:background="@color/primary"
+                android:paddingBottom="4dip"
+                android:paddingTop="4dip" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/xianshiTimeTextView"
+                style="@style/TextView.Time"
+                android:layout_marginTop="4dip" />
+
+            <View
+                style="@style/View.Line"
+                android:layout_marginBottom="4dip"
+                android:layout_marginTop="4dip" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/xianshiDescTextView"
+                style="@style/TextView.GoodsActivity"
+                android:background="@color/boy"
+                android:gravity="center_vertical"
+                android:paddingBottom="4dip"
+                android:paddingTop="4dip" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/xianshiRemarkTextView"
+                style="@style/TextView.Time"
+                android:layout_marginTop="4dip" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/activityTextView"
+        style="@style/TextView.Normal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="最近店铺没有促销活动"
+        tools:ignore="HardcodedText" />
+
+</android.support.v7.widget.LinearLayoutCompat>

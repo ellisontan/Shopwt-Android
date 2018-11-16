@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Wrap">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/mainImageView"
+        style="@style/ImageView.Main"
+        android:layout_height="120dip" />
+
+</android.support.v7.widget.LinearLayoutCompat>

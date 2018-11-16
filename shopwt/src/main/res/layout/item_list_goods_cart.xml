@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Wrap"
+    android:paddingBottom="4dip"
+    android:paddingTop="4dip">
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/mainCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="64dip"
+        android:layout_marginLeft="8dip"
+        android:layout_marginStart="8dip"
+        android:checked="true" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/mainImageView"
+        style="@style/ImageView.GoodsVer"
+        android:layout_width="56dip"
+        android:layout_height="56dip"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_toEndOf="@+id/mainCheckBox"
+        android:layout_toRightOf="@+id/mainCheckBox" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/nameTextView"
+        style="@style/TextView.Name"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toLeftOf="@+id/deleteImageView"
+        android:layout_toRightOf="@+id/mainImageView"
+        android:layout_toStartOf="@+id/deleteImageView"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/deleteImageView"
+        style="@style/ImageView.Item"
+        android:layout_width="32dip"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="8dip"
+        android:layout_marginRight="8dip"
+        android:src="@drawable/ic_delete_item" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/moneyTextView"
+        style="@style/TextView.Money"
+        android:layout_alignBottom="@+id/mainImageView"
+        android:layout_marginEnd="4dip"
+        android:layout_marginRight="4dip"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/mobileTextView"
+        style="@style/TextView.ItemMobileHave"
+        android:layout_alignBottom="@id/moneyTextView"
+        android:layout_alignTop="@+id/moneyTextView"
+        android:layout_toEndOf="@+id/moneyTextView"
+        android:layout_toRightOf="@+id/moneyTextView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/activityTextView"
+        style="@style/TextView.GoodsActivity"
+        android:layout_alignBottom="@id/moneyTextView"
+        android:layout_alignTop="@+id/moneyTextView"
+        android:layout_margin="2dip"
+        android:layout_toEndOf="@+id/moneyTextView"
+        android:layout_toRightOf="@+id/moneyTextView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/subTextView"
+        style="@style/TextView.Selector"
+        android:layout_alignBottom="@+id/addTextView"
+        android:layout_alignTop="@+id/addTextView"
+        android:layout_toLeftOf="@+id/numberEditText"
+        android:layout_toStartOf="@id/numberEditText"
+        android:text="-"
+        tools:ignore="HardcodedText" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/numberEditText"
+        style="@style/EditText.Selector"
+        android:layout_alignBottom="@+id/addTextView"
+        android:layout_alignTop="@+id/addTextView"
+        android:layout_toLeftOf="@+id/addTextView"
+        android:layout_toStartOf="@+id/addTextView"
+        android:enabled="false"
+        android:focusable="false" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/addTextView"
+        style="@style/TextView.Selector"
+        android:layout_alignBottom="@+id/mainImageView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="16dip"
+        android:layout_marginRight="16dip"
+        android:text="+"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

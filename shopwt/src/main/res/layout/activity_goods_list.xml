@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/searchEditText"
+            style="@style/EditText.Search"
+            android:layout_marginEnd="48dip"
+            android:layout_marginRight="48dip"
+            android:background="@drawable/border_white" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/toolbarImageView"
+            style="@style/ImageView.Toolbar"
+            android:layout_gravity="end" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/lineView"
+        style="@style/View.Line"
+        android:layout_below="@+id/mainToolbar" />
+
+    <top.yokey.shopwt.view.PullRefreshView
+        android:id="@+id/mainPullRefreshView"
+        style="@style/Layout.Main"
+        android:layout_below="@+id/lineView"
+        android:layout_marginTop="48dip" />
+
+    <include
+        layout="@layout/include_goods_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lineView" />
+
+</RelativeLayout>

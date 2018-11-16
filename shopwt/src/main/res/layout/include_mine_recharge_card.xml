@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main"
+    android:background="@color/background"
+    tools:ignore="Overdraw">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        style="@style/Layout.Tool"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip">
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/TextView.Title"
+            android:text="充值卡"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/codeEditText"
+            style="@style/EditText.Username"
+            android:layout_weight="1"
+            android:hint="请输入充值卡号"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        style="@style/Layout.Tool"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip">
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/TextView.Title"
+            android:text="验证码"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/captchaEditText"
+            style="@style/EditText.Username"
+            android:layout_weight="1"
+            android:hint="请输入验证码"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/captchaImageView"
+            android:layout_width="88dip"
+            android:layout_height="40dip"
+            android:layout_gravity="center" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/submitTextView"
+        style="@style/TextView.Button"
+        android:text="确认提交"
+        tools:ignore="HardcodedText" />
+
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/mainScrollView"
+        style="@style/Layout.Main">
+
+        <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mainRecyclerView"
+                style="@style/Layout.Main"
+                android:layout_marginTop="16dip" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/storeLinearLayout"
+                style="@style/Layout.Wrap">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/storeNameTextView"
+                    style="@style/TextView.Tool"
+                    android:layout_height="40dip"
+                    android:background="@color/white"
+                    android:drawableLeft="@mipmap/ic_store_goods"
+                    android:drawablePadding="4dip"
+                    android:drawableStart="@mipmap/ic_store_goods"
+                    android:paddingLeft="16dip"
+                    android:paddingRight="16dip"
+                    android:text="店铺名字"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <RelativeLayout
+                    style="@style/Layout.Tool"
+                    android:layout_marginTop="1px">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/TextView.ToolTitle"
+                        android:text="描述相符"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatRatingBar
+                        android:id="@+id/descRatingBar"
+                        style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:isIndicator="false"
+                        android:numStars="5"
+                        android:stepSize="1" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/Layout.Tool"
+                    android:layout_marginTop="1px">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/TextView.ToolTitle"
+                        android:text="服务态度"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatRatingBar
+                        android:id="@+id/serviceRatingBar"
+                        style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:isIndicator="false"
+                        android:numStars="5"
+                        android:stepSize="1" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/Layout.Tool"
+                    android:layout_marginTop="1px">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/TextView.ToolTitle"
+                        android:text="发货速度"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatRatingBar
+                        android:id="@+id/logisticsRatingBar"
+                        style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:isIndicator="false"
+                        android:numStars="5"
+                        android:stepSize="1" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/saveTextView"
+                style="@style/TextView.Button"
+                android:text="评 价"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.v7.widget.LinearLayoutCompat>

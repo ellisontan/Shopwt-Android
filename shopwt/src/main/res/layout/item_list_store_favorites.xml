@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Item">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/mainImageView"
+        style="@style/ImageView.Store" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/nameTextView"
+        style="@style/TextView.Name"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/favoritesTextView"
+        style="@style/TextView.Small"
+        android:layout_below="@+id/nameTextView"
+        android:layout_marginTop="4dip"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/goodsTextView"
+        style="@style/TextView.Small"
+        android:layout_below="@+id/favoritesTextView"
+        android:layout_marginTop="2dip"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/deleteImageView"
+        android:layout_width="24dip"
+        android:layout_height="24dip"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_delete_item" />
+
+</RelativeLayout>

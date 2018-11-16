@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/typeLinearLayout"
+        style="@style/Layout.Horizontal"
+        android:layout_height="48dip">
+
+        <top.yokey.shopwt.view.CenterTextView
+            android:id="@+id/normalTextView"
+            style="@style/TextView.Normal"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_color_white"
+            android:drawableLeft="@mipmap/ic_register_normal"
+            android:drawableStart="@mipmap/ic_register_normal"
+            android:text="普通注册"
+            tools:ignore="HardcodedText" />
+
+        <top.yokey.shopwt.view.CenterTextView
+            android:id="@+id/mobileTextView"
+            style="@style/TextView.Normal"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_color_white"
+            android:drawableLeft="@mipmap/ic_register_mobile"
+            android:drawableStart="@mipmap/ic_register_mobile"
+            android:text="手机注册"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/normalLinearLayout"
+            style="@style/Layout.Main">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="16dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="登录用户"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/usernameEditText"
+                    style="@style/EditText.Username" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="设置密码"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/passwordEditText"
+                    style="@style/EditText.Password" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="确认密码"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/confirmEditText"
+                    style="@style/EditText.Password" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="电子邮箱"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/emailEditText"
+                    style="@style/EditText.Username"
+                    android:hint="请输入邮箱地址"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/registerTextView"
+                style="@style/TextView.Button"
+                android:text="注册账号"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/mobileLinearLayout"
+            style="@style/Layout.Main"
+            android:visibility="gone">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="16dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="手机号码"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/mobileEditText"
+                    style="@style/EditText.Mobile"
+                    android:layout_weight="1" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/getTextView"
+                    style="@style/TextView.Title"
+                    android:text="获取验证码"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="短信验证"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/codeEditText"
+                    style="@style/EditText.Username"
+                    android:hint="请输入短信验证码"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="设置密码"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/passwordSmsEditText"
+                    style="@style/EditText.Password" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/completeTextView"
+                style="@style/TextView.Button"
+                android:text="完成注册"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

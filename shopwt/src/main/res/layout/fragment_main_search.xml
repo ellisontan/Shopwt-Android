@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/toolbarLinearLayout"
+        style="@style/Layout.Horizontal"
+        android:layout_height="48dip"
+        android:background="@color/primary">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/scanImageView"
+            style="@style/ImageView.Toolbar"
+            android:background="@drawable/selector_color_primary"
+            android:src="@drawable/ic_action_scan_white" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/searchEditText"
+            style="@style/EditText.SearchToolbar"
+            android:focusable="true" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/searchImageView"
+            style="@style/ImageView.Toolbar"
+            android:background="@drawable/selector_color_primary"
+            android:src="@drawable/ic_action_search_white" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <View
+        style="@style/View.Line"
+        android:layout_height="8dip" />
+
+    <android.support.v7.widget.AppCompatTextView
+        style="@style/TextView.Line"
+        android:background="@color/background"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip"
+        android:text="热门搜索"
+        tools:ignore="HardcodedText" />
+
+    <View
+        style="@style/View.Line"
+        android:layout_height="8dip" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/keyRecyclerView"
+        style="@style/Layout.Main"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip" />
+
+    <View
+        style="@style/View.Line"
+        android:layout_height="8dip" />
+
+    <android.support.v7.widget.AppCompatTextView
+        style="@style/TextView.Line"
+        android:background="@color/background"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip"
+        android:text="历史记录"
+        tools:ignore="HardcodedText" />
+
+    <View
+        style="@style/View.Line"
+        android:layout_height="8dip" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/historyRecyclerView"
+        style="@style/Layout.Main"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip" />
+
+    <View
+        style="@style/View.Line"
+        android:layout_height="match_parent" />
+
+</android.support.v7.widget.LinearLayoutCompat>

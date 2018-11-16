@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/toolbarImageView"
+            style="@style/ImageView.Toolbar"
+            android:layout_gravity="end" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/mainScrollView"
+        style="@style/Layout.Main">
+
+        <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="商品分类"
+                    android:textColor="@color/greyAdd"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/cateTextView"
+                    style="@style/EditText.Username"
+                    android:gravity="center_vertical"
+                    android:hint="请选择商品分类"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="商品名称"
+                    android:textColor="@color/greyAdd"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/nameEditText"
+                    style="@style/EditText.Username"
+                    android:gravity="center_vertical"
+                    android:hint="请输入商品名称"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="商品价格"
+                    android:textColor="@color/greyAdd"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/moneyEditText"
+                    style="@style/EditText.Username"
+                    android:gravity="center_vertical"
+                    android:hint="请输入商品价格"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="市场价格"
+                    android:textColor="@color/greyAdd"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/priceEditText"
+                    style="@style/EditText.Username"
+                    android:gravity="center_vertical"
+                    android:hint="请输入市场价格"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="价格折扣"
+                    android:textColor="@color/greyAdd"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/discountTextView"
+                    style="@style/EditText.Username"
+                    android:gravity="center_vertical"
+                    android:hint="自动算出来的"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1px"
+                android:paddingBottom="8dip"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:paddingTop="8dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="商品主图"
+                    android:textColor="@color/greyAdd"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/oneImageView"
+                    android:layout_width="48dip"
+                    android:layout_height="48dip"
+                    android:layout_marginLeft="12dip"
+                    android:layout_marginStart="12dip"
+                    android:src="@mipmap/ic_add_img" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/twoImageView"
+                    android:layout_width="48dip"
+                    android:layout_height="48dip"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginStart="8dip"
+                    android:src="@mipmap/ic_add_img" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/thrImageView"
+                    android:layout_width="48dip"
+                    android:layout_height="48dip"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginStart="8dip"
+                    android:src="@mipmap/ic_add_img" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/fouImageView"
+                    android:layout_width="48dip"
+                    android:layout_height="48dip"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginStart="8dip"
+                    android:src="@mipmap/ic_add_img" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/fivImageView"
+                    android:layout_width="48dip"
+                    android:layout_height="48dip"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginStart="8dip"
+                    android:src="@mipmap/ic_add_img" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="商品库存"
+                    android:textColor="@color/greyAdd"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/stockEditText"
+                    style="@style/EditText.Username"
+                    android:gravity="center_vertical"
+                    android:hint="请输入商品库存"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="商品货号"
+                    android:textColor="@color/greyAdd"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/numberEditText"
+                    style="@style/EditText.Username"
+                    android:gravity="center_vertical"
+                    android:hint="请输入商品货号"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="物流费用"
+                    android:textColor="@color/greyAdd"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/logisticsEditText"
+                    style="@style/EditText.Username"
+                    android:gravity="center_vertical"
+                    android:hint="请输入物流费用"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="商品描述"
+                    android:textColor="@color/greyAdd"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/descEditText"
+                    style="@style/EditText.Username"
+                    android:gravity="center_vertical"
+                    android:hint="请输入商品简介"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Tool"
+                android:layout_marginTop="1px"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.Title"
+                    android:text="商品状态"
+                    android:textColor="@color/greyAdd"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/nowRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginStart="8dip"
+                    android:checked="true"
+                    android:hint="立即发布"
+                    android:textColor="@color/blackSub"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/wareRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginStart="8dip"
+                    android:hint="放入仓库"
+                    android:textColor="@color/blackSub"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/saveTextView"
+                style="@style/TextView.Button"
+                android:text="保存信息"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.v7.widget.LinearLayoutCompat>

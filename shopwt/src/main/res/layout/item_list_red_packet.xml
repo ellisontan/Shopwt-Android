@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Wrap"
+    android:layout_marginBottom="8dip"
+    android:layout_marginLeft="16dip"
+    android:layout_marginRight="16dip"
+    android:layout_marginTop="8dip"
+    android:background="@drawable/bg_red_packet"
+    android:paddingLeft="4dip"
+    android:paddingRight="4dip">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/mainImageView"
+        style="@style/ImageView.GoodsVer"
+        android:layout_width="56dip"
+        android:layout_height="56dip"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dip" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/titleTextView"
+        style="@style/TextView.Normal"
+        android:layout_alignTop="@+id/mainImageView"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView"
+        android:paddingBottom="2dip"
+        android:paddingTop="8dip" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/timeTextView"
+        style="@style/TextView.Small"
+        android:layout_below="@+id/titleTextView"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/moneyTextView"
+        style="@style/TextView.Money"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/titleTextView"
+        android:paddingBottom="2dip"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:paddingTop="4dip"
+        android:textColor="@color/white" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/limitTextView"
+        style="@style/TextView.Small"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/moneyTextView"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

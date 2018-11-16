@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Item">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/mainImageView"
+        style="@style/ImageView.Store" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/nameTextView"
+        style="@style/TextView.Name"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/gradeTextView"
+        style="@style/TextView.GoodsActivity"
+        android:layout_marginLeft="4dip"
+        android:layout_marginStart="4dip"
+        android:layout_toEndOf="@+id/nameTextView"
+        android:layout_toRightOf="@+id/nameTextView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/creditTextView"
+        style="@style/TextView.Small"
+        android:layout_below="@+id/nameTextView"
+        android:layout_marginTop="4dip"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/goodsTextView"
+        style="@style/TextView.Small"
+        android:layout_below="@+id/creditTextView"
+        android:layout_marginTop="2dip"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/creditLinearLayout"
+        style="@style/Layout.Horizontal"
+        android:layout_height="24dip"
+        android:layout_below="@+id/mainImageView"
+        android:layout_marginTop="8dip">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Horizontal"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Smalls"
+                android:layout_height="match_parent"
+                android:text="描述："
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatRatingBar
+                android:id="@+id/creditDescRatingBar"
+                style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:stepSize="1" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Horizontal"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Smalls"
+                android:layout_height="match_parent"
+                android:text="服务："
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatRatingBar
+                android:id="@+id/creditServerRatingBar"
+                style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:stepSize="1" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Horizontal"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Smalls"
+                android:layout_height="match_parent"
+                android:text="物流："
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatRatingBar
+                android:id="@+id/creditDeliveryRatingBar"
+                style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:stepSize="1" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/goodsRecyclerView"
+        style="@style/Layout.Wrap"
+        android:layout_below="@+id/creditLinearLayout"
+        android:layout_marginTop="4dip" />
+
+</RelativeLayout>

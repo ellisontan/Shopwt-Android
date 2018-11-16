@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/goodsTextView"
+            style="@style/TextView.Title"
+            android:padding="8dip"
+            android:text="商品"
+            android:textColor="@color/primary"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/detailedTextView"
+            style="@style/TextView.Title"
+            android:padding="8dip"
+            android:text="详情"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/evaluateTextView"
+            style="@style/TextView.Title"
+            android:padding="8dip"
+            android:text="评价"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mainViewPager"
+        style="@style/Layout.Main" />
+
+</android.support.v7.widget.LinearLayoutCompat>

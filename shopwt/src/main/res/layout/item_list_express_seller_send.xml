@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Item"
+    android:layout_height="56dip">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/nameTextView"
+        style="@style/TextView.Normal"
+        android:layout_centerVertical="true"
+        android:text="顺丰快递"
+        tools:ignore="HardcodedText" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/codeEditText"
+        style="@style/EditText.Line"
+        android:layout_height="32dip"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_toEndOf="@+id/nameTextView"
+        android:layout_toLeftOf="@+id/confirmTextView"
+        android:layout_toRightOf="@+id/nameTextView"
+        android:layout_toStartOf="@+id/confirmTextView"
+        android:background="@drawable/selector_border_selector"
+        android:hint="请输入快递单号"
+        tools:ignore="HardcodedText" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/confirmTextView"
+        style="@style/TextView.Small"
+        android:layout_alignBottom="@+id/codeEditText"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/codeEditText"
+        android:layout_centerVertical="true"
+        android:background="@drawable/selector_border_selector"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip"
+        android:text="确认"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

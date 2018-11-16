@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/lineView"
+        style="@style/View.Line"
+        android:layout_below="@+id/mainToolbar" />
+
+    <com.scrollablelayout.ScrollableLayout
+        android:id="@+id/mainScrollableLayout"
+        style="@style/Layout.Main"
+        android:layout_above="@+id/lineOneView"
+        android:layout_below="@+id/lineView">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/headerLinearLayout"
+            style="@style/Layout.Wrap">
+
+            <RelativeLayout
+                android:id="@+id/addressRelativeLayout"
+                style="@style/Layout.Tool"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/addressTitleTextView"
+                    style="@style/TextView.ToolTitle"
+                    android:layout_height="40dip"
+                    android:text="收货地址"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/TextView.ToolValueDot"
+                    android:layout_height="40dip"
+                    android:text="点击选择"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    style="@style/View.Line"
+                    android:layout_below="@+id/addressTitleTextView" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/addressNameTextView"
+                    style="@style/TextView.Max"
+                    android:layout_below="@+id/addressTitleTextView"
+                    android:layout_marginTop="12dip"
+                    android:textColor="@color/blackSub" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/addressMobileTextView"
+                    style="@style/TextView.Normal"
+                    android:layout_alignBottom="@+id/addressNameTextView"
+                    android:layout_alignTop="@+id/addressNameTextView"
+                    android:layout_toEndOf="@+id/addressNameTextView"
+                    android:layout_toRightOf="@+id/addressNameTextView"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/addressAreaTextView"
+                    style="@style/TextView.Normal"
+                    android:layout_below="@+id/addressNameTextView"
+                    android:layout_marginBottom="12dip"
+                    android:layout_marginTop="4dip" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/Layout.Tool"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/payTitleTextView"
+                    style="@style/TextView.ToolTitle"
+                    android:layout_height="40dip"
+                    android:text="支付方式"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    style="@style/View.Line"
+                    android:layout_below="@+id/payTitleTextView" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/payOnlineTextView"
+                    style="@style/TextView.ChooseType"
+                    android:layout_below="@+id/payTitleTextView"
+                    android:layout_marginBottom="12dip"
+                    android:layout_marginTop="12dip"
+                    android:text="在线支付"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/payOfflineTextView"
+                    style="@style/TextView.ChooseType"
+                    android:layout_below="@+id/payTitleTextView"
+                    android:layout_marginBottom="12dip"
+                    android:layout_marginTop="12dip"
+                    android:layout_toEndOf="@+id/payOnlineTextView"
+                    android:layout_toRightOf="@+id/payOnlineTextView"
+                    android:background="@drawable/selector_border_grey_add"
+                    android:text="货到付款"
+                    android:visibility="gone"
+                    tools:ignore="HardcodedText" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/invoiceRelativeLayout"
+                style="@style/Layout.Tool"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dip">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/invoiceTitleTextView"
+                    style="@style/TextView.ToolTitle"
+                    android:layout_height="40dip"
+                    android:text="发票信息"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    style="@style/View.Line"
+                    android:layout_below="@+id/invoiceTitleTextView" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/invoiceNoTextView"
+                    style="@style/TextView.ChooseType"
+                    android:layout_below="@+id/invoiceTitleTextView"
+                    android:layout_marginBottom="12dip"
+                    android:layout_marginTop="12dip"
+                    android:text="不需要发票"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/invoiceYesTextView"
+                    style="@style/TextView.ChooseType"
+                    android:layout_below="@+id/invoiceTitleTextView"
+                    android:layout_marginBottom="12dip"
+                    android:layout_marginTop="12dip"
+                    android:layout_toEndOf="@+id/invoiceNoTextView"
+                    android:layout_toRightOf="@+id/invoiceNoTextView"
+                    android:background="@drawable/selector_border_grey_add"
+                    android:text="需要发票"
+                    tools:ignore="HardcodedText" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/View.Line"
+                android:layout_height="16dip" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mainRecyclerView"
+            style="@style/Layout.Main" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/redPacketLinearLayout"
+            style="@style/Layout.Item"
+            android:layout_height="48dip"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Small"
+                android:layout_height="match_parent"
+                android:text="平台红包"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/redPacketTextView"
+                style="@style/TextView.Small"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|end" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </com.scrollablelayout.ScrollableLayout>
+
+    <View
+        android:id="@+id/lineOneView"
+        style="@style/View.Line"
+        android:layout_above="@+id/operaLinearLayout" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/operaLinearLayout"
+        style="@style/Layout.Horizontal"
+        android:layout_height="48dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/moneyTextView"
+            style="@style/TextView.Normal"
+            android:layout_weight="1"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:text="合计金额"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/balanceTextView"
+            style="@style/TextView.Normal"
+            android:layout_width="128dip"
+            android:layout_height="48dip"
+            android:background="@drawable/selector_color_primary"
+            android:gravity="center"
+            android:text="提交订单"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</RelativeLayout>

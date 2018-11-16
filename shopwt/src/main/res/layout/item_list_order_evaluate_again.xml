@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Wrap">
+
+    <RelativeLayout
+        android:id="@+id/mainRelativeLayout"
+        style="@style/Layout.Item">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/mainImageView"
+            style="@style/ImageView.GoodsVer"
+            android:layout_width="64dip"
+            android:layout_height="64dip"
+            android:layout_marginEnd="8dip"
+            android:layout_marginRight="8dip" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/nameTextView"
+            style="@style/TextView.Name"
+            android:layout_toEndOf="@+id/mainImageView"
+            android:layout_toRightOf="@+id/mainImageView"
+            android:textSize="12sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/evaluateTextView"
+            style="@style/TextView.Smalls"
+            android:layout_alignBottom="@+id/mainImageView"
+            android:layout_marginEnd="8dip"
+            android:layout_marginRight="8dip"
+            android:layout_toEndOf="@+id/mainImageView"
+            android:layout_toRightOf="@+id/mainImageView"
+            android:paddingBottom="2dip"
+            android:paddingTop="2dip"
+            android:text="商品评分"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/evaluateEditText"
+            style="@style/EditText.Area"
+            android:layout_height="64dip"
+            android:layout_below="@+id/mainImageView"
+            android:layout_marginBottom="8dip"
+            android:layout_marginTop="8dip"
+            android:background="@drawable/border_background"
+            android:hint="商品怎么样？好不好？"
+            android:padding="8dip"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/imageTextView"
+            style="@style/TextView.Normal"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_below="@+id/evaluateEditText"
+            android:drawablePadding="-4dip"
+            android:drawableTop="@drawable/ic_camera"
+            android:gravity="center"
+            android:text="晒图"
+            android:textColor="@color/greySub"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/zeroImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_below="@+id/evaluateEditText"
+            android:layout_marginLeft="4dip"
+            android:layout_marginStart="4dip"
+            android:layout_toEndOf="@+id/imageTextView"
+            android:layout_toRightOf="@+id/imageTextView"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_add_img" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/oneImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_below="@+id/evaluateEditText"
+            android:layout_marginLeft="4dip"
+            android:layout_marginStart="4dip"
+            android:layout_toEndOf="@+id/zeroImageView"
+            android:layout_toRightOf="@+id/zeroImageView"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_add_img" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/twoImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_below="@+id/evaluateEditText"
+            android:layout_marginLeft="8dip"
+            android:layout_marginStart="8dip"
+            android:layout_toEndOf="@+id/oneImageView"
+            android:layout_toRightOf="@+id/oneImageView"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_add_img" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/thrImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_below="@+id/evaluateEditText"
+            android:layout_marginLeft="8dip"
+            android:layout_marginStart="8dip"
+            android:layout_toEndOf="@+id/twoImageView"
+            android:layout_toRightOf="@+id/twoImageView"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_add_img" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/fouImageView"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_below="@+id/evaluateEditText"
+            android:layout_marginLeft="8dip"
+            android:layout_marginStart="8dip"
+            android:layout_toEndOf="@+id/thrImageView"
+            android:layout_toRightOf="@+id/thrImageView"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_add_img" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/View.Line"
+        android:layout_height="12dip" />
+
+</android.support.v7.widget.LinearLayoutCompat>

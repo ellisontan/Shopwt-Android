@@ -1,0 +1,26 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "http://mvn.mob.com/android"
+        }
+    }
+    dependencies {
+        //noinspection GradleDynamicVersion
+        classpath "com.mob.sdk:MobSDK:+"
+        classpath "com.android.tools.build:gradle:3.1.4"
+        classpath "com.tencent.bugly:tinker-support:1.1.2"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

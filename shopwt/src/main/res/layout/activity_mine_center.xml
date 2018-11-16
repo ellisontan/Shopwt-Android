@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+
+        <RelativeLayout
+            android:id="@+id/passwordRelativeLayout"
+            style="@style/Layout.Tool"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dip"
+            android:paddingTop="12dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/passwordTextView"
+                style="@style/TextView.Normal"
+                android:text="登录密码"
+                android:textColor="@color/title"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Small"
+                android:layout_below="@+id/passwordTextView"
+                android:layout_marginTop="4dip"
+                android:text="建议您定期更改密码以保护账户安全"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_dot_right" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mobileRelativeLayout"
+            style="@style/Layout.Tool"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:paddingBottom="12dip"
+            android:paddingTop="12dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/mobileTextView"
+                style="@style/TextView.Normal"
+                android:text="手机验证"
+                android:textColor="@color/title"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Small"
+                android:layout_below="@+id/mobileTextView"
+                android:layout_marginTop="4dip"
+                android:text="若您的手机已丢失或停用，请立即修改更换"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_dot_right" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/payPassRelativeLayout"
+            style="@style/Layout.Tool"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:paddingBottom="12dip"
+            android:paddingTop="12dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/payPassTextView"
+                style="@style/TextView.Normal"
+                android:text="支付密码"
+                android:textColor="@color/title"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Small"
+                android:layout_below="@+id/payPassTextView"
+                android:layout_marginTop="4dip"
+                android:text="建议您设置复杂的支付密码保护账户金额安全"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_dot_right" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/logoutTextView"
+            style="@style/TextView.Button"
+            android:text="注销登录"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Item">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/mainTextView"
+        style="@style/TextView.Normal"
+        android:layout_alignBottom="@+id/pointsTextView"
+        android:layout_alignTop="@+id/pointsTextView"
+        android:textColor="@color/blackSub" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/pointsTextView"
+        style="@style/TextView.Money"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:textSize="18sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/descTextView"
+        style="@style/TextView.Normal"
+        android:layout_below="@+id/mainTextView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/timeTextView"
+        style="@style/TextView.Time"
+        android:layout_below="@+id/mainTextView"
+        android:textSize="14sp" />
+
+</RelativeLayout>

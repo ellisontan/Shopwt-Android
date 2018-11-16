@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/tipsRelativeLayout"
+        style="@style/Layout.Main"
+        android:layout_weight="1"
+        android:background="@color/background">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="64dip"
+            android:layout_height="64dip"
+            android:layout_above="@+id/tipsTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dip"
+            android:background="@drawable/border_grey_40dip"
+            android:scaleType="center"
+            android:src="@mipmap/ic_default_cart" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tipsTextView"
+            style="@style/TextView.Normal"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:text="您尚未登录！"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <top.yokey.shopwt.view.PullRefreshView
+        android:id="@+id/mainPullRefreshView"
+        style="@style/Layout.Main"
+        android:layout_weight="1" />
+
+    <View
+        android:id="@+id/lineView"
+        style="@style/View.Line" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/operaLinearLayout"
+        style="@style/Layout.Horizontal"
+        android:layout_height="48dip"
+        android:background="@color/white">
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/mainCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:checked="true" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/moneyTextView"
+            style="@style/TextView.Normal"
+            android:layout_weight="1"
+            android:text="合计金额"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/balanceTextView"
+            style="@style/TextView.Normal"
+            android:layout_width="96dip"
+            android:layout_height="48dip"
+            android:background="@drawable/selector_color_primary"
+            android:gravity="center"
+            android:text="结 算"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

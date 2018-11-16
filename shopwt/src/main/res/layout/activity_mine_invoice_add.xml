@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/toolbarImageView"
+            style="@style/ImageView.Toolbar"
+            android:layout_gravity="end" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Horizontal"
+            android:padding="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/personTextView"
+                style="@style/TextView.ChooseType"
+                android:text="个 人"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/companyTextView"
+                style="@style/TextView.ChooseType"
+                android:background="@drawable/selector_border_grey_add"
+                android:text="公 司"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/headerLinearLayout"
+            style="@style/Layout.Tool"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:visibility="gone">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="发票抬头"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/headerEditText"
+                style="@style/EditText.Username"
+                android:layout_weight="1"
+                android:hint="请输入发票抬头"
+                tools:ignore="HardcodedText" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <View style="@style/View.Line" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Tool"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TextView.Title"
+                android:text="发票内容"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/titleSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dip"
+                android:layout_marginLeft="4dip"
+                android:layout_marginRight="4dip" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/saveTextView"
+            style="@style/TextView.Button"
+            android:text="保存发票"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

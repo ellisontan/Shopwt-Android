@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Wrap">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/titleTextView"
+        style="@style/TextView.Normal"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:gravity="center"
+        android:textColor="@color/grey"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/subTitleTextView"
+        style="@style/TextView.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dip"
+        android:gravity="center"
+        android:textColor="@color/greySub"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/home1ImageView"
+        style="@style/ImageView.Main"
+        android:layout_height="200dip"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/home2LinearLayout"
+        style="@style/Layout.Wrap"
+        android:layout_height="180dip"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/home21ImageView"
+            style="@style/ImageView.Main"
+            android:layout_weight="1" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Main"
+            android:layout_marginLeft="1px"
+            android:layout_marginStart="1px"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/home22ImageView"
+                style="@style/ImageView.Main"
+                android:layout_weight="1" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/home23ImageView"
+                style="@style/ImageView.Main"
+                android:layout_marginBottom="1px"
+                android:layout_marginTop="1px"
+                android:layout_weight="1" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/home4LinearLayout"
+        style="@style/Layout.Wrap"
+        android:layout_height="180dip"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Main"
+            android:layout_marginEnd="1px"
+            android:layout_marginRight="1px"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/home42ImageView"
+                style="@style/ImageView.Main"
+                android:layout_weight="1" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/home43ImageView"
+                style="@style/ImageView.Main"
+                android:layout_marginBottom="1px"
+                android:layout_marginTop="1px"
+                android:layout_weight="1" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/home41ImageView"
+            style="@style/ImageView.Main"
+            android:layout_weight="1" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/home5LinearLayout"
+        style="@style/Layout.Wrap"
+        android:layout_height="220dip"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/home51ImageView"
+            style="@style/ImageView.Main"
+            android:layout_weight="1" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            style="@style/Layout.Main"
+            android:layout_marginLeft="1px"
+            android:layout_marginStart="1px"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/home52ImageView"
+                style="@style/ImageView.Main"
+                android:layout_weight="1" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/Layout.Main"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/home53ImageView"
+                    style="@style/ImageView.Main"
+                    android:layout_marginBottom="1px"
+                    android:layout_marginTop="1px"
+                    android:layout_weight="1" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/home54ImageView"
+                    style="@style/ImageView.Main"
+                    android:layout_marginBottom="1px"
+                    android:layout_marginTop="1px"
+                    android:layout_weight="1" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mainRecyclerView"
+        style="@style/Layout.Main"
+        android:visibility="gone" />
+
+</android.support.v7.widget.LinearLayoutCompat>

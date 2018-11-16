@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        style="@style/Layout.Horizontal"
+        android:background="@color/white"
+        android:paddingBottom="8dip"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip"
+        android:paddingTop="16dip">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/allTextView"
+            style="@style/TextView.ChooseType"
+            android:layout_weight="1"
+            android:background="@drawable/border_evaluate_press"
+            android:gravity="center"
+            android:text="全部"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/goodTextView"
+            style="@style/TextView.ChooseType"
+            android:layout_weight="1"
+            android:background="@drawable/border_evaluate"
+            android:gravity="center"
+            android:text="好评"
+            android:textColor="@color/greyAdd"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/inTextView"
+            style="@style/TextView.ChooseType"
+            android:layout_weight="1"
+            android:background="@drawable/border_evaluate"
+            android:gravity="center"
+            android:text="中评"
+            android:textColor="@color/greyAdd"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/badTextView"
+            style="@style/TextView.ChooseType"
+            android:layout_weight="1"
+            android:background="@drawable/border_evaluate"
+            android:gravity="center"
+            android:text="差评"
+            android:textColor="@color/greyAdd"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/imageTextView"
+            style="@style/TextView.ChooseType"
+            android:layout_weight="1"
+            android:background="@drawable/border_evaluate"
+            android:gravity="center"
+            android:text="带图"
+            android:textColor="@color/greyAdd"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        style="@style/Layout.Wrap"
+        android:background="@color/white"
+        android:paddingBottom="16dip">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/additionTextView"
+            style="@style/TextView.ChooseType"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:background="@drawable/border_evaluate"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:text="追价"
+            android:textColor="@color/greyAdd"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <View
+        style="@style/View.Line" />
+
+    <top.yokey.shopwt.view.PullRefreshView
+        android:id="@+id/mainPullRefreshView"
+        style="@style/Layout.Main" />
+
+</android.support.v7.widget.LinearLayoutCompat>

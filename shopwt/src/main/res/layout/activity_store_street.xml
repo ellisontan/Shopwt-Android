@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLinearLayout"
+    style="@style/Layout.Main">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        style="@style/Toolbar.Main">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/titleTextView"
+            style="@style/TextView.Title" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/toolbarImageView"
+            style="@style/ImageView.Toolbar"
+            android:layout_gravity="end" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/View.Line" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        style="@style/Layout.Horizontal"
+        android:layout_height="48dip"
+        android:background="@color/white">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/searchEditText"
+            style="@style/EditText.Search"
+            android:layout_marginLeft="16dip"
+            android:layout_marginStart="16dip" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/searchImageView"
+            style="@style/ImageView.Toolbar"
+            android:src="@drawable/ic_action_search" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <View style="@style/View.Line" />
+
+    <top.yokey.shopwt.view.PullRefreshView
+        android:id="@+id/mainPullRefreshView"
+        style="@style/Layout.Main" />
+
+    <top.yokey.shopwt.view.PullRefreshView
+        android:id="@+id/classPullRefreshView"
+        style="@style/Layout.Main"
+        android:visibility="gone" />
+
+</android.support.v7.widget.LinearLayoutCompat>

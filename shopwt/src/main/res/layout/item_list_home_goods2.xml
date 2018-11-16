@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRelativeLayout"
+    style="@style/Layout.Goods">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/mainImageView"
+        style="@style/ImageView.Goods" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/nameTextView"
+        style="@style/TextView.Name"
+        android:layout_below="@+id/mainImageView"
+        android:paddingBottom="4dip"
+        android:paddingTop="4dip"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/lineView"
+        style="@style/View.Line"
+        android:layout_below="@+id/nameTextView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/moneyTextView"
+        style="@style/TextView.Money"
+        android:layout_below="@+id/lineView"
+        android:layout_marginEnd="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="4dip"
+        android:textSize="14sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/mobileTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        style="@style/TextView.GoodsActivity"
+        android:layout_alignBottom="@id/moneyTextView"
+        android:layout_alignTop="@+id/moneyTextView"
+        android:text=" 抢 购 "
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

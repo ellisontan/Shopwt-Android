@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--suppress ALL -->
+
+<resources>
+
+    <color name="primary">#FF4B00</color>
+    <color name="primaryAdd">#DD2900</color>
+    <color name="white">#FFFFFF</color>
+    <color name="whiteSub">#F6F6F6</color>
+    <color name="whiteAdd">#E1E1E1</color>
+    <color name="black">#000000</color>
+    <color name="blackSub">#222222</color>
+    <color name="grey">#999999</color>
+    <color name="greySub">#BBBBBB</color>
+    <color name="greyAdd">#777777</color>
+    <color name="red">#FF0000</color>
+    <color name="redAdd">#AA0000</color>
+
+    <color name="boy">#57A8F2</color>
+    <color name="girl">#FBA69D</color>
+    <color name="title">#AA000000</color>
+    <color name="background">#F1F1F1</color>
+    <color name="backgroundName">#AA000000</color>
+    <color name="backgroundMine">#33000000</color>
+    <color name="backgroundStore">#66000000</color>
+    <color name="backgroundLoadMore">#EEFFFFFF</color>
+    <color name="transparent">@android:color/transparent</color>
+
+</resources>
