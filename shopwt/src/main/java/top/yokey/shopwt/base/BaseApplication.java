@@ -19,7 +19,6 @@ import android.os.Build;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
-import android.support.multidex.MultiDex;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v4.graphics.drawable.DrawableCompat;
@@ -72,8 +71,6 @@ import top.yokey.shopwt.adapter.BaseViewPagerAdapter;
 
 import com.jiagu.sdk.BaseProtected;
 import com.mob.MobSDK;
-import com.tencent.bugly.Bugly;
-import com.tencent.bugly.beta.Beta;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
 import com.zhihu.matisse.Matisse;
@@ -144,7 +141,6 @@ public class BaseApplication extends Application {
         BaseFileClient.get().init(getPackageName());
         BaseAnimClient.get().init(BaseConstant.TIME_ANIM);
         BaseLogger.get().init(this, BaseConstant.TAG_LOG);
-        Bugly.init(this, BaseConstant.BUGLY_APP_ID, false);
         BaseShared.get().init(getSharedPreferences(BaseConstant.SHARED_NAME, MODE_PRIVATE));
         MemberHttpClient.get().init(this, BaseConstant.URL_API, BaseShared.get().getString(BaseConstant.SHARED_KEY), true);
         SellerHttpClient.get().init(this, BaseConstant.URL_API, BaseShared.get().getString(BaseConstant.SHARED_SELLER_KEY), true);
@@ -157,13 +153,6 @@ public class BaseApplication extends Application {
         isPush = BaseShared.get().getBoolean(BaseConstant.SHARED_SETTING_PUSH, true);
         isImage = BaseShared.get().getBoolean(BaseConstant.SHARED_SETTING_IMAGE, true);
 
-    }
-
-    @Override
-    public void attachBaseContext(Context context) {
-        super.attachBaseContext(context);
-        MultiDex.install(context);
-        Beta.installTinker();
     }
 
     //账号相关

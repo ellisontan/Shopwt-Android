@@ -64,6 +64,5 @@ public class BaseConstant {
     //第三方
 
     public static final String WX_APP_ID = "wx67bc79b681fee1b3";
-    public static final String BUGLY_APP_ID = "7efc96d9c8";
 
 }
