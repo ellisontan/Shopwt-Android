@@ -9,8 +9,7 @@ buildscript {
     dependencies {
         //noinspection GradleDynamicVersion
         classpath "com.mob.sdk:MobSDK:+"
-        classpath "com.android.tools.build:gradle:3.1.4"
-        classpath "com.tencent.bugly:tinker-support:1.1.2"
+        classpath "com.android.tools.build:gradle:3.2.1"
     }
 }
 

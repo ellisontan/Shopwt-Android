@@ -1,11 +1,10 @@
 apply plugin: "com.android.application"
-apply from: "tinker-support.gradle"
 apply plugin: "com.mob.sdk"
 
 android {
 
     compileSdkVersion 28
-    buildToolsVersion "28.0.2"
+    buildToolsVersion "28.0.3"
     repositories { flatDir { dirs "libs" } }
     sourceSets { main { jniLibs.srcDirs = ["libs"] } }
     externalNativeBuild { cmake { path "CMakeLists.txt" } }
@@ -16,7 +15,6 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1"
-        multiDexEnabled true
         externalNativeBuild { cmake { cppFlags "-std=c++11" } }
         ndk { abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64" }
         manifestPlaceholders = [
@@ -78,8 +76,6 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.android.support:design:+"
     //noinspection GradleDynamicVersion
-    implementation "com.android.support:multidex:+"
-    //noinspection GradleDynamicVersion
     implementation "com.android.support:support-v4:+"
     //noinspection GradleDynamicVersion
     implementation "com.android.support:appcompat-v7:+"
@@ -109,12 +105,6 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.github.XuDaojie:QRCode-Android:+"
     //noinspection GradleDynamicVersion
-    implementation "com.tencent.bugly:nativecrashreport:+"
-    //noinspection GradleDynamicVersion
-    implementation "com.tencent.tinker:tinker-android-lib:+"
-    //noinspection GradleDynamicVersion
-    implementation "com.tencent.bugly:crashreport_upgrade:+"
-    //noinspection GradleDynamicVersion
     implementation "com.github.w446108264:ScrollableLayout:+"
     //手动导入的Jar
     implementation files("libs/WxPay.jar")
@@ -134,7 +124,6 @@ MobSDK {
                 appKey "aed9b0303e3ed1e27bae87c33761161d"
                 shareByAppClient true
             }
-            Email {}
             QZone {
                 appId "100371282"
                 appKey "aed9b0303e3ed1e27bae87c33761161d"
@@ -150,7 +139,6 @@ MobSDK {
                 appSecret "38a4f8204cc784f81f9f0daaf31e02e3"
                 shareByAppClient true
             }
-            ShortMessage {}
             WechatMoments {
                 appId "wx4868b35061f87885"
                 appSecret "64020361b8ec4c99936c0e3999a9f249"

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Shopwt.iml" filepath="$PROJECT_DIR$/Shopwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopwt/shopwt.iml" filepath="$PROJECT_DIR$/shopwt/shopwt.iml" />
+    </modules>
+  </component>
+</project>
