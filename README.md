@@ -11,11 +11,11 @@
 **本开源程序作者：MapStory，联系QQ：1002285057(如需要商业授权，定制开发，请联系。PS:闲聊勿扰。)**
 
 
-Shopwt 系统简介：[ShopWT官网-专业开发B2B2C多用户商城系统_微信商城_手机商城系统_网店源码](http://www.shopwt.com/)
+Shopwt 系统简介：[ShopWT官网-专业开发B2B2C多用户商城系统_微信商城_手机商城系统_网店源码](https://shopai.yokey.top/)
 
-Shopwt PC演示站：[ShopWT多用户商城系统 - Powered by shopwt.com](http://demo.shopwt.com/)
+Shopwt PC演示站：[ShopWT多用户商城系统 - Powered by shopwt.com](https://shopai.yokey.top/)
 
-Shopwt Wap演示站：[ShopWT多用户商城系统 - Powered by shopwt.com](http://demo.shopwt.com/mobile/)
+Shopwt Wap演示站：[ShopWT多用户商城系统 - Powered by shopwt.com](https://shopai.yokey.top/mobile/)
 
 基于好商城Shopwt的原生Android客户端，简单修改两行代码即可适配到自己的商城系统。目前实现的功能：二维码扫描，支付宝微信支付，商家后台，热更新等（一个完整的购物APP均已实现）
 
